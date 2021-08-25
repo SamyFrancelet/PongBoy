@@ -1,0 +1,5 @@
+Change Component Footprint: Designator=T1 Old Footprint=SOT523-3 P0.90 C0.8x1.6 H1.3 New Footprint=SOT23 P0.95 C1.6x3.0 H1.3
+Change Component Footprint: Designator=T2 Old Footprint=SOT523-3 P0.90 C0.8x1.6 H1.3 New Footprint=SOT23 P0.95 C1.6x3.0 H1.3
+Change Component Footprint: Designator=T3 Old Footprint=SOT523-3 P0.90 C0.8x1.6 H1.3 New Footprint=SOT23 P0.95 C1.6x3.0 H1.3
+Change Component Footprint: Designator=T4 Old Footprint=SOT523-3 P0.90 C0.8x1.6 H1.3 New Footprint=SOT23 P0.95 C1.6x3.0 H1.3
+Added Room: Name=PongBoy

@@ -1,0 +1,3 @@
+Change Component Footprint: Designator=TP1 Old Footprint=Pad D1.5 New Footprint=Pad D2.0
+Change Component Footprint: Designator=TP2 Old Footprint=Pad D1.5 New Footprint=Pad D2.0
+Added Room: Name=PongBoy

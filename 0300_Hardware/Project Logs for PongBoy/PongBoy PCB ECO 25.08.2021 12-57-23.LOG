@@ -1,0 +1,238 @@
+Added Component: Designator=C1(CAPACITOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Added Component: Designator=C2(CAPACITOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Added Component: Designator=C3(CAPACITOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Added Component: Designator=G1(Battery Holder Keystone 2xAAA 2468)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=J1(MOLEX 43650-0300)
+Add component. Clean all parameters for all variants
+Added Component: Designator=J2(TAG CONNECT TC2030-MCP-FP)
+Add component. Clean all parameters for all variants
+Added Component: Designator=LCD1(LCD-NHD-2.4-240320SF)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "LCD-NHD-2.4-240320SF"; VariantName = "[No Variations]"
+Added Component: Designator=M1(Screw Hex Socket M3X5 Unconnected)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "M3x20"; VariantName = "[No Variations]"
+Added Component: Designator=M2(Screw Hex Socket M3X5 Unconnected)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "M3x20"; VariantName = "[No Variations]"
+Added Component: Designator=M3(Screw Hex Socket M3X5 Unconnected)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "M3x20"; VariantName = "[No Variations]"
+Added Component: Designator=M4(Screw Hex Socket M3X5 Unconnected)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "M3x20"; VariantName = "[No Variations]"
+Added Component: Designator=R1(RESISTOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Added Component: Designator=R2(RESISTOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Added Component: Designator=R3(RESISTOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "100"; VariantName = "[No Variations]"
+Added Component: Designator=R4(RESISTOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Added Component: Designator=R5(RESISTOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Added Component: Designator=R6(RESISTOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Added Component: Designator=R7(RESISTOR 2012 REFLOW)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "TBD"; VariantName = "[No Variations]"
+Added Component: Designator=R8(LDR VT900)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=SP1(Speaker PUI Audio AT-0927-TT-3-R)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "PUI Audio AT-0927-TT-3-R"; VariantName = "[No Variations]"
+Added Component: Designator=T1(SOT523-3 P0.90 C0.8x1.6 H1.3)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "PMV13XNEAR"; VariantName = "[No Variations]"
+Added Component: Designator=T2(SOT523-3 P0.90 C0.8x1.6 H1.3)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "PMV13XNEAR"; VariantName = "[No Variations]"
+Added Component: Designator=T3(SOT523-3 P0.90 C0.8x1.6 H1.3)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "PMV13XNEAR"; VariantName = "[No Variations]"
+Added Component: Designator=T4(SOT523-3 P0.90 C0.8x1.6 H1.3)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "PMV13XNEAR"; VariantName = "[No Variations]"
+Added Component: Designator=TP1(Pad D1.5)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=TP2(Pad D1.5)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=TP3(Test Point Vogt 1016L.68M)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=TP4(Test Point Vogt 1016L.68M)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=TP5(Test Point Vogt 1016L.68M)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=TP6(Test Point Vogt 1016L.68M)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=TP7(Test Point Vogt 1016L.68M)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U1(SO28 P1.27 C7.5X17.9 H2.7)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "PIC18LF25K22I/SO"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+3V Pin=C1-2
+Added Pin To Net: NetName=+3V Pin=C2-2
+Added Pin To Net: NetName=+3V Pin=C3-2
+Added Pin To Net: NetName=+3V Pin=G1-1
+Added Pin To Net: NetName=+3V Pin=J2-2
+Added Pin To Net: NetName=+3V Pin=LCD1-7
+Added Pin To Net: NetName=+3V Pin=LCD1-8
+Added Pin To Net: NetName=+3V Pin=LCD1-30
+Added Pin To Net: NetName=+3V Pin=LCD1-31
+Added Pin To Net: NetName=+3V Pin=LCD1-38
+Added Pin To Net: NetName=+3V Pin=R1-2
+Added Pin To Net: NetName=+3V Pin=R2-2
+Added Pin To Net: NetName=+3V Pin=R3-2
+Added Pin To Net: NetName=+3V Pin=R7-2
+Added Pin To Net: NetName=+3V Pin=TP1-1
+Added Pin To Net: NetName=+3V Pin=U1-20
+Added Net: Name=+3V
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=GND Pin=J1-1
+Added Pin To Net: NetName=GND Pin=J2-3
+Added Pin To Net: NetName=GND Pin=R4-1
+Added Pin To Net: NetName=GND Pin=R5-1
+Added Pin To Net: NetName=GND Pin=R6-1
+Added Pin To Net: NetName=GND Pin=T1-2
+Added Pin To Net: NetName=GND Pin=T2-2
+Added Pin To Net: NetName=GND Pin=T3-2
+Added Pin To Net: NetName=GND Pin=T4-2
+Added Pin To Net: NetName=GND Pin=TP2-1
+Added Pin To Net: NetName=GND Pin=U1-8
+Added Pin To Net: NetName=GND Pin=U1-19
+Added Net: Name=GND
+Added Pin To Net: NetName=LCD_GND Pin=LCD1-1
+Added Pin To Net: NetName=LCD_GND Pin=LCD1-33
+Added Pin To Net: NetName=LCD_GND Pin=LCD1-39
+Added Pin To Net: NetName=LCD_GND Pin=R8-2
+Added Pin To Net: NetName=LCD_GND Pin=T3-3
+Added Net: Name=LCD_GND
+Added Pin To Net: NetName=NetG1_2 Pin=G1-2
+Added Pin To Net: NetName=NetG1_2 Pin=T1-3
+Added Net: Name=NetG1_2
+Added Pin To Net: NetName=NetJ1_2 Pin=J1-2
+Added Pin To Net: NetName=NetJ1_2 Pin=TP5-1
+Added Pin To Net: NetName=NetJ1_2 Pin=U1-18
+Added Net: Name=NetJ1_2
+Added Pin To Net: NetName=NetJ1_3 Pin=J1-3
+Added Pin To Net: NetName=NetJ1_3 Pin=TP6-1
+Added Pin To Net: NetName=NetJ1_3 Pin=U1-17
+Added Net: Name=NetJ1_3
+Added Pin To Net: NetName=NetJ2_1 Pin=J2-1
+Added Pin To Net: NetName=NetJ2_1 Pin=R2-1
+Added Pin To Net: NetName=NetJ2_1 Pin=U1-1
+Added Net: Name=NetJ2_1
+Added Pin To Net: NetName=NetJ2_4 Pin=J2-4
+Added Pin To Net: NetName=NetJ2_4 Pin=U1-27
+Added Net: Name=NetJ2_4
+Added Pin To Net: NetName=NetJ2_5 Pin=J2-5
+Added Pin To Net: NetName=NetJ2_5 Pin=U1-28
+Added Net: Name=NetJ2_5
+Added Pin To Net: NetName=NetLCD1_2 Pin=LCD1-2
+Added Pin To Net: NetName=NetLCD1_2 Pin=U1-21
+Added Net: Name=NetLCD1_2
+Added Pin To Net: NetName=NetLCD1_3 Pin=LCD1-3
+Added Pin To Net: NetName=NetLCD1_3 Pin=U1-22
+Added Net: Name=NetLCD1_3
+Added Pin To Net: NetName=NetLCD1_4 Pin=LCD1-4
+Added Pin To Net: NetName=NetLCD1_4 Pin=U1-23
+Added Net: Name=NetLCD1_4
+Added Pin To Net: NetName=NetLCD1_5 Pin=LCD1-5
+Added Pin To Net: NetName=NetLCD1_5 Pin=U1-24
+Added Net: Name=NetLCD1_5
+Added Pin To Net: NetName=NetLCD1_10 Pin=LCD1-10
+Added Pin To Net: NetName=NetLCD1_10 Pin=U1-26
+Added Net: Name=NetLCD1_10
+Added Pin To Net: NetName=NetLCD1_11 Pin=LCD1-11
+Added Pin To Net: NetName=NetLCD1_11 Pin=U1-14
+Added Net: Name=NetLCD1_11
+Added Pin To Net: NetName=NetLCD1_12 Pin=LCD1-12
+Added Pin To Net: NetName=NetLCD1_12 Pin=U1-15
+Added Net: Name=NetLCD1_12
+Added Pin To Net: NetName=NetLCD1_13 Pin=LCD1-13
+Added Pin To Net: NetName=NetLCD1_13 Pin=U1-16
+Added Net: Name=NetLCD1_13
+Added Pin To Net: NetName=NetLCD1_22 Pin=LCD1-22
+Added Pin To Net: NetName=NetLCD1_22 Pin=U1-2
+Added Net: Name=NetLCD1_22
+Added Pin To Net: NetName=NetLCD1_23 Pin=LCD1-23
+Added Pin To Net: NetName=NetLCD1_23 Pin=U1-3
+Added Net: Name=NetLCD1_23
+Added Pin To Net: NetName=NetLCD1_24 Pin=LCD1-24
+Added Pin To Net: NetName=NetLCD1_24 Pin=U1-4
+Added Net: Name=NetLCD1_24
+Added Pin To Net: NetName=NetLCD1_25 Pin=LCD1-25
+Added Pin To Net: NetName=NetLCD1_25 Pin=U1-5
+Added Net: Name=NetLCD1_25
+Added Pin To Net: NetName=NetLCD1_26 Pin=LCD1-26
+Added Pin To Net: NetName=NetLCD1_26 Pin=U1-6
+Added Net: Name=NetLCD1_26
+Added Pin To Net: NetName=NetLCD1_27 Pin=LCD1-27
+Added Pin To Net: NetName=NetLCD1_27 Pin=U1-7
+Added Net: Name=NetLCD1_27
+Added Pin To Net: NetName=NetLCD1_28 Pin=LCD1-28
+Added Pin To Net: NetName=NetLCD1_28 Pin=U1-10
+Added Net: Name=NetLCD1_28
+Added Pin To Net: NetName=NetLCD1_29 Pin=LCD1-29
+Added Pin To Net: NetName=NetLCD1_29 Pin=U1-9
+Added Net: Name=NetLCD1_29
+Added Pin To Net: NetName=NetLCD1_34 Pin=LCD1-34
+Added Pin To Net: NetName=NetLCD1_34 Pin=LCD1-35
+Added Pin To Net: NetName=NetLCD1_34 Pin=LCD1-36
+Added Pin To Net: NetName=NetLCD1_34 Pin=LCD1-37
+Added Pin To Net: NetName=NetLCD1_34 Pin=T2-3
+Added Net: Name=NetLCD1_34
+Added Pin To Net: NetName=NetR1_1 Pin=R1-1
+Added Pin To Net: NetName=NetR1_1 Pin=T1-1
+Added Net: Name=NetR1_1
+Added Pin To Net: NetName=NetR3_1 Pin=R3-1
+Added Pin To Net: NetName=NetR3_1 Pin=SP1-1
+Added Net: Name=NetR3_1
+Added Pin To Net: NetName=NetR4_2 Pin=R4-2
+Added Pin To Net: NetName=NetR4_2 Pin=T2-1
+Added Pin To Net: NetName=NetR4_2 Pin=TP4-1
+Added Pin To Net: NetName=NetR4_2 Pin=U1-12
+Added Net: Name=NetR4_2
+Added Pin To Net: NetName=NetR5_2 Pin=R5-2
+Added Pin To Net: NetName=NetR5_2 Pin=T4-1
+Added Pin To Net: NetName=NetR5_2 Pin=TP3-1
+Added Pin To Net: NetName=NetR5_2 Pin=U1-13
+Added Net: Name=NetR5_2
+Added Pin To Net: NetName=NetR6_2 Pin=R6-2
+Added Pin To Net: NetName=NetR6_2 Pin=T3-1
+Added Pin To Net: NetName=NetR6_2 Pin=U1-11
+Added Net: Name=NetR6_2
+Added Pin To Net: NetName=NetR7_1 Pin=R7-1
+Added Pin To Net: NetName=NetR7_1 Pin=R8-1
+Added Pin To Net: NetName=NetR7_1 Pin=TP7-1
+Added Pin To Net: NetName=NetR7_1 Pin=U1-25
+Added Net: Name=NetR7_1
+Added Pin To Net: NetName=NetSP1_2 Pin=SP1-2
+Added Pin To Net: NetName=NetSP1_2 Pin=T4-3
+Added Net: Name=NetSP1_2
+Added Class: Name=PongBoy
+Added Room: Name=PongBoy
