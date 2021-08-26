@@ -1,0 +1,14 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [PongBoy.PrjPcb]
+   Generated File[PongBoy.GTL]
+   Generated File[PongBoy.GBL]
+   Generated File[PongBoy.RUL]
+   Generated File[PongBoy.EXTREP]
+   Generated File[PongBoy.REP]
+
+
+Files Generated   : 5
+Documents Printed : 0
+
+Finished Output Generation At 11:21:09 On 26.08.2021
