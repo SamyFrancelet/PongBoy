@@ -2,6 +2,22 @@
 FileName = PongBoy.GBR
 AutoAperture = True
 *************************************************************
+Generating : Top Overlay
+      File : PongBoy.GTO
+
+    Adding Layer      : Top Overlay
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+*************************************************************
+
+*************************************************************
 Generating : Top Layer
       File : PongBoy.GTL
 
@@ -14,8 +30,6 @@ Generating : Top Layer
 
 Used DCodes :
     D10
-    D11
-    D12
     D13
     D14
     D15
@@ -35,6 +49,25 @@ Used DCodes :
     D29
     D30
     D31
+    D32
+    D33
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : PongBoy.GBO
+
+    Adding Layer      : Bottom Overlay
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+    D10
+    D11
+    D13
+    D21
+    D39
 *************************************************************
 
 *************************************************************
@@ -50,14 +83,12 @@ Generating : Bottom Layer
 
 Used DCodes :
     D10
-    D11
-    D12
+    D13
+    D14
     D15
-    D17
-    D18
-    D20
+    D16
+    D19
     D21
-    D22
     D23
     D24
     D25
@@ -73,5 +104,7 @@ Used DCodes :
     D35
     D36
     D37
+    D38
+    D39
 *************************************************************
 
