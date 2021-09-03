@@ -9,6 +9,7 @@
 #define	PONGBOY_H
 
 #include "../board/tsc/tsc.h"
+#include "../app/pong_ctrl.h"
 #include "../board/lcd/lcd_highlevel.h"
 
 void PongBoy_init();

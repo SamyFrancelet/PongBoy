@@ -53,8 +53,7 @@ typedef enum {
     TSC_evTSC       = 14
 } TSC_event;
 
-typedef struct TSC
-{
+typedef struct {
     uint16_t x;
     uint16_t y;
     
@@ -67,7 +66,7 @@ typedef struct TSC
     TSC_state oldState;
 } TSC;
 
-void TSC_Init(TSC* me);
+void TSC_init(TSC* me);
 void TSC_getPos(TSC* me);
 void TSC_measX(TSC* me);
 void TSC_measY(TSC* me);

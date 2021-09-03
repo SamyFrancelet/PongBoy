@@ -12,9 +12,12 @@
 #include "pongboy.h"
 #include "../xf/xf.h"
 
+#define DEBUG true
+
 extern const FONT_INFO arialNarrow_12ptFontInfo;
 
 TSC tsc;
+Pong pong;
 
 void PongBoy_init() {
     // Start the PLL
@@ -46,7 +49,8 @@ void PongBoy_init() {
 //    LCD_DrawText("Hello friend", &arialNarrow_12ptFontInfo,
 //            A_LEFT, 50, 50, WHITE, BLACK);
 
-    TSC_Init(&tsc);
+    TSC_init(&tsc);
+    Pong_init(&pong);
 }
 
 void PongBoy_build() {
@@ -55,6 +59,7 @@ void PongBoy_build() {
 
 void PongBoy_start() {
     TSC_startBehavior(&tsc);
+    Pong_startBehavior(&pong);
 }
 
 void PongBoy_execEvent() {
@@ -63,17 +68,18 @@ void PongBoy_execEvent() {
     
     if (ev != NULLEVENT) {
         TSC_SM(&tsc, ev);
+        Pong_SM(&pong, ev);
         
-        if (ev == TSC_evTSC) {
+        if (ev == TSC_evTSC && DEBUG) {
             char txt[20];
             
             sprintf(txt, "X=%03d", tsc.x);
             LCD_DrawText(txt, &arialNarrow_12ptFontInfo,
-                    A_LEFT, 50, 50, WHITE, BLACK);
+                    A_LEFT, 0, 0, RED, BLACK);
 
             sprintf(txt, "Y=%03d", tsc.y);
             LCD_DrawText(txt, &arialNarrow_12ptFontInfo,
-                    A_LEFT, 150, 50, WHITE, BLACK);
+                    A_RIGHT, 320, 0, RED, BLACK);
         }
     }
 }

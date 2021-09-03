@@ -28,7 +28,6 @@ void __interrupt() isr(void) {
         } else {
             XF_pushEvent(TSC_evPress, true);
         }
-
     }
 }
 

@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=src/board/lcd/arialNarrow_12ptBitmaps.c src/board/lcd/lcd_highlevel.c src/board/tsc/tsc.c src/hal/lcd/lcd_lowlevel.c src/xf/xf.c src/main.c src/pongboy/pongboy.c src/configuration_bits.c
+SOURCEFILES_QUOTED_IF_SPACED=src/board/lcd/arialNarrow_12ptBitmaps.c src/board/lcd/lcd_highlevel.c src/board/tsc/tsc.c src/hal/lcd/lcd_lowlevel.c src/xf/xf.c src/main.c src/pongboy/pongboy.c src/configuration_bits.c src/game_objects/paddle.c src/app/pong_ctrl.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/src/board/lcd/arialNarrow_12ptBitmaps.p1 ${OBJECTDIR}/src/board/lcd/lcd_highlevel.p1 ${OBJECTDIR}/src/board/tsc/tsc.p1 ${OBJECTDIR}/src/hal/lcd/lcd_lowlevel.p1 ${OBJECTDIR}/src/xf/xf.p1 ${OBJECTDIR}/src/main.p1 ${OBJECTDIR}/src/pongboy/pongboy.p1 ${OBJECTDIR}/src/configuration_bits.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/src/board/lcd/arialNarrow_12ptBitmaps.p1.d ${OBJECTDIR}/src/board/lcd/lcd_highlevel.p1.d ${OBJECTDIR}/src/board/tsc/tsc.p1.d ${OBJECTDIR}/src/hal/lcd/lcd_lowlevel.p1.d ${OBJECTDIR}/src/xf/xf.p1.d ${OBJECTDIR}/src/main.p1.d ${OBJECTDIR}/src/pongboy/pongboy.p1.d ${OBJECTDIR}/src/configuration_bits.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/src/board/lcd/arialNarrow_12ptBitmaps.p1 ${OBJECTDIR}/src/board/lcd/lcd_highlevel.p1 ${OBJECTDIR}/src/board/tsc/tsc.p1 ${OBJECTDIR}/src/hal/lcd/lcd_lowlevel.p1 ${OBJECTDIR}/src/xf/xf.p1 ${OBJECTDIR}/src/main.p1 ${OBJECTDIR}/src/pongboy/pongboy.p1 ${OBJECTDIR}/src/configuration_bits.p1 ${OBJECTDIR}/src/game_objects/paddle.p1 ${OBJECTDIR}/src/app/pong_ctrl.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/src/board/lcd/arialNarrow_12ptBitmaps.p1.d ${OBJECTDIR}/src/board/lcd/lcd_highlevel.p1.d ${OBJECTDIR}/src/board/tsc/tsc.p1.d ${OBJECTDIR}/src/hal/lcd/lcd_lowlevel.p1.d ${OBJECTDIR}/src/xf/xf.p1.d ${OBJECTDIR}/src/main.p1.d ${OBJECTDIR}/src/pongboy/pongboy.p1.d ${OBJECTDIR}/src/configuration_bits.p1.d ${OBJECTDIR}/src/game_objects/paddle.p1.d ${OBJECTDIR}/src/app/pong_ctrl.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/src/board/lcd/arialNarrow_12ptBitmaps.p1 ${OBJECTDIR}/src/board/lcd/lcd_highlevel.p1 ${OBJECTDIR}/src/board/tsc/tsc.p1 ${OBJECTDIR}/src/hal/lcd/lcd_lowlevel.p1 ${OBJECTDIR}/src/xf/xf.p1 ${OBJECTDIR}/src/main.p1 ${OBJECTDIR}/src/pongboy/pongboy.p1 ${OBJECTDIR}/src/configuration_bits.p1
+OBJECTFILES=${OBJECTDIR}/src/board/lcd/arialNarrow_12ptBitmaps.p1 ${OBJECTDIR}/src/board/lcd/lcd_highlevel.p1 ${OBJECTDIR}/src/board/tsc/tsc.p1 ${OBJECTDIR}/src/hal/lcd/lcd_lowlevel.p1 ${OBJECTDIR}/src/xf/xf.p1 ${OBJECTDIR}/src/main.p1 ${OBJECTDIR}/src/pongboy/pongboy.p1 ${OBJECTDIR}/src/configuration_bits.p1 ${OBJECTDIR}/src/game_objects/paddle.p1 ${OBJECTDIR}/src/app/pong_ctrl.p1
 
 # Source Files
-SOURCEFILES=src/board/lcd/arialNarrow_12ptBitmaps.c src/board/lcd/lcd_highlevel.c src/board/tsc/tsc.c src/hal/lcd/lcd_lowlevel.c src/xf/xf.c src/main.c src/pongboy/pongboy.c src/configuration_bits.c
+SOURCEFILES=src/board/lcd/arialNarrow_12ptBitmaps.c src/board/lcd/lcd_highlevel.c src/board/tsc/tsc.c src/hal/lcd/lcd_lowlevel.c src/xf/xf.c src/main.c src/pongboy/pongboy.c src/configuration_bits.c src/game_objects/paddle.c src/app/pong_ctrl.c
 
 
 
@@ -158,6 +158,22 @@ ${OBJECTDIR}/src/configuration_bits.p1: src/configuration_bits.c  nbproject/Make
 	@-${MV} ${OBJECTDIR}/src/configuration_bits.d ${OBJECTDIR}/src/configuration_bits.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/src/configuration_bits.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/src/game_objects/paddle.p1: src/game_objects/paddle.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/src/game_objects" 
+	@${RM} ${OBJECTDIR}/src/game_objects/paddle.p1.d 
+	@${RM} ${OBJECTDIR}/src/game_objects/paddle.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/src/game_objects/paddle.p1 src/game_objects/paddle.c 
+	@-${MV} ${OBJECTDIR}/src/game_objects/paddle.d ${OBJECTDIR}/src/game_objects/paddle.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/src/game_objects/paddle.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/src/app/pong_ctrl.p1: src/app/pong_ctrl.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/src/app" 
+	@${RM} ${OBJECTDIR}/src/app/pong_ctrl.p1.d 
+	@${RM} ${OBJECTDIR}/src/app/pong_ctrl.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/src/app/pong_ctrl.p1 src/app/pong_ctrl.c 
+	@-${MV} ${OBJECTDIR}/src/app/pong_ctrl.d ${OBJECTDIR}/src/app/pong_ctrl.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/src/app/pong_ctrl.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/src/board/lcd/arialNarrow_12ptBitmaps.p1: src/board/lcd/arialNarrow_12ptBitmaps.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/src/board/lcd" 
@@ -222,6 +238,22 @@ ${OBJECTDIR}/src/configuration_bits.p1: src/configuration_bits.c  nbproject/Make
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/src/configuration_bits.p1 src/configuration_bits.c 
 	@-${MV} ${OBJECTDIR}/src/configuration_bits.d ${OBJECTDIR}/src/configuration_bits.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/src/configuration_bits.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/src/game_objects/paddle.p1: src/game_objects/paddle.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/src/game_objects" 
+	@${RM} ${OBJECTDIR}/src/game_objects/paddle.p1.d 
+	@${RM} ${OBJECTDIR}/src/game_objects/paddle.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/src/game_objects/paddle.p1 src/game_objects/paddle.c 
+	@-${MV} ${OBJECTDIR}/src/game_objects/paddle.d ${OBJECTDIR}/src/game_objects/paddle.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/src/game_objects/paddle.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/src/app/pong_ctrl.p1: src/app/pong_ctrl.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/src/app" 
+	@${RM} ${OBJECTDIR}/src/app/pong_ctrl.p1.d 
+	@${RM} ${OBJECTDIR}/src/app/pong_ctrl.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/src/app/pong_ctrl.p1 src/app/pong_ctrl.c 
+	@-${MV} ${OBJECTDIR}/src/app/pong_ctrl.d ${OBJECTDIR}/src/app/pong_ctrl.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/src/app/pong_ctrl.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 
