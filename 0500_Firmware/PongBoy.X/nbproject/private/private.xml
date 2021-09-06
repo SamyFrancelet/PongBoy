@@ -6,12 +6,14 @@
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/pongboy/pongboy.h</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/main.c</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/board/tsc/tsc.c</file>
-            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/board/lcd/lcd_highlevel.h</file>
+            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/game_objects/ball.h</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/game_objects/paddle.c</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/app/pong_ctrl.c</file>
-            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/board/tsc/tsc.h</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/game_objects/paddle.h</file>
+            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/display/display.c</file>
+            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/display/display.h</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/app/pong_ctrl.h</file>
+            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/game_objects/ball.c</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/pongboy/pongboy.c</file>
         </group>
     </open-files>

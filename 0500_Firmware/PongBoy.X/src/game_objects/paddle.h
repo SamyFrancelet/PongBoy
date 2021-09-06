@@ -14,18 +14,26 @@
 
 #define PADDLE_WIDTH 5
 #define PADDLE_HEIGHT 40
+#define PADDLE_SPEED 3
 
 typedef enum {
     Paddle_notMoving,
     Paddle_moving
 } Paddle_state;
 
+typedef enum {
+    Paddle_redraw = 61,
+} Paddle_event;
+
 typedef struct {
     uint16_t posX;
     uint16_t posY;
     
-    uint16_t speedX;
-    uint16_t speedY;
+    uint16_t oldX;
+    uint16_t oldY;
+    
+    int16_t speedX;
+    int16_t speedY;
     
     bool isPlayer;
     
@@ -36,7 +44,7 @@ typedef struct {
 void Paddle_init(Paddle* me, bool isPlayer);
 void Paddle_startBehavior(Paddle* me);
 bool Paddle_SM(Paddle* me, Event ev);
-void Paddle_draw(Paddle* me, uint16_t color);
+void Paddle_draw(Paddle* me, uint16_t color, uint16_t bg_color);
 void Paddle_step(Paddle* me);
 
 #endif	/* PADDLE_H */

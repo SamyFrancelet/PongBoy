@@ -144,7 +144,7 @@ bool TSC_SM(TSC* me, Event ev) {
                 XF_pushEvent(TSC_evTSC, false);
                 
                 // Schedule a timer and pass to the next state
-                me->tmrID = XF_scheduleTimer(90, TSC_evNextMeas, false);
+                me->tmrID = XF_scheduleTimer(100, TSC_evNextMeas, false);
                 me->state = TSC_waitMeas;
                 INT0IF = 0;         // Clear flag, because measure sets it
                 INT0IE = 1;         // Enable INT0

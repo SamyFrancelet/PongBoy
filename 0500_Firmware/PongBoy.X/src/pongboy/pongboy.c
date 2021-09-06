@@ -17,6 +17,7 @@
 extern const FONT_INFO arialNarrow_12ptFontInfo;
 
 TSC tsc;
+Display disp;
 Pong pong;
 
 void PongBoy_init() {
@@ -39,10 +40,6 @@ void PongBoy_init() {
     
     INTEDG0 = 0;        // Falling edge
     INT0IE = 0;         // Disable INT0
-    
-    LCD_Init();
-    
-    LCD_Fill(BLACK);
 
 //    LCD_DrawRect(100,100,150,150,1,YELLOW);
 
@@ -51,6 +48,7 @@ void PongBoy_init() {
 
     TSC_init(&tsc);
     Pong_init(&pong);
+    Display_init(&disp);
 }
 
 void PongBoy_build() {
@@ -60,6 +58,7 @@ void PongBoy_build() {
 void PongBoy_start() {
     TSC_startBehavior(&tsc);
     Pong_startBehavior(&pong);
+    Display_startBehavior(&disp);
 }
 
 void PongBoy_execEvent() {
@@ -69,6 +68,7 @@ void PongBoy_execEvent() {
     if (ev != NULLEVENT) {
         TSC_SM(&tsc, ev);
         Pong_SM(&pong, ev);
+        Display_update(&disp, ev);
         
         if (ev == TSC_evTSC && DEBUG) {
             char txt[20];
@@ -82,4 +82,12 @@ void PongBoy_execEvent() {
                     A_RIGHT, 320, 0, RED, BLACK);
         }
     }
+}
+
+TSC* PongBoy_getTSC() {
+    return &tsc;
+}
+
+Pong* PongBoy_getGame() {
+    return &pong;
 }

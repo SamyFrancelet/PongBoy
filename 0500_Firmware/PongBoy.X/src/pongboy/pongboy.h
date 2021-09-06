@@ -10,13 +10,16 @@
 
 #include "../board/tsc/tsc.h"
 #include "../app/pong_ctrl.h"
-#include "../board/lcd/lcd_highlevel.h"
+#include "../display/display.h"
 
 void PongBoy_init();
 void PongBoy_build();
 void PongBoy_start();
 
 void PongBoy_execEvent();
+
+TSC* PongBoy_getTSC();
+Pong* PongBoy_getGame();
 
 #endif	/* PONGBOY_H */
 

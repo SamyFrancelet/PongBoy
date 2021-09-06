@@ -9,6 +9,7 @@
 #define	PONG_CONTROLLER_H
 
 #include "../game_objects/paddle.h"
+#include "../game_objects/ball.h"
 
 typedef enum {
     Pong_reset,
@@ -26,6 +27,8 @@ typedef enum {
 typedef struct {
     Paddle leftPaddle;
     Paddle rightPaddle;
+    
+    Ball ball;
     
     Pong_state state;
     Pong_state oldState;
