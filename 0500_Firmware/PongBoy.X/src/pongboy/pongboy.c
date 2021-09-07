@@ -6,18 +6,17 @@
  */
 
 #include <xc.h>
-#include <string.h>
-#include <stdio.h>
 
 #include "pongboy.h"
+#include "../hal/lcd/lcd_lowlevel.h"
 #include "../xf/xf.h"
-
-extern const FONT_INFO arialNarrow_12ptFontInfo;
 
 TSC tsc;
 Menu menu;
 Pong pong;
 Display disp;
+
+TimerID tmrID;
 
 void PongBoy_init() {
     // Start the PLL
@@ -60,6 +59,8 @@ void PongBoy_start() {
     Menu_startBehavior(&menu);
     Pong_startBehavior(&pong);
     Display_startBehavior(&disp);
+    
+    tmrID = XF_scheduleTimer(10000, SLEEP_EV, false);
 }
 
 void PongBoy_execEvent() {
@@ -72,18 +73,26 @@ void PongBoy_execEvent() {
         Pong_SM(&pong, ev);
         Display_update(&disp, ev);
         
-        if (ev == TSC_evTSC && DEBUG) {
-            char txt[20];
-
-            sprintf(txt, "X=%03d", tsc.x);
-            LCD_DrawText(txt, &arialNarrow_12ptFontInfo,
-                    A_LEFT, 0, 0, RED, BG_COLOR);
-
-            sprintf(txt, "Y=%03d", tsc.y);
-            LCD_DrawText(txt, &arialNarrow_12ptFontInfo,
-                    A_RIGHT, 320, 0, RED, BG_COLOR);
+        if(ev == SLEEP_EV) {
+            guteNacht();
+        } else if (ev == TSC_evTSC) {
+            XF_unscheduleTimer(tmrID, false);
+            tmrID = XF_scheduleTimer(10000, SLEEP_EV, false);
         }
     }
+}
+
+void guteNacht() {
+    LCD_nRD = 1;
+    LCD_nWR = 1;
+    LCD_DnC = 1;
+    LCD_nCS = 1;
+    
+    LCD_DATA_BUS = 0xFF;
+    
+    LCD_PowerOff();
+    Sleep();
+    Reset();
 }
 
 TSC* PongBoy_getTSC() {

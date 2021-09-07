@@ -28,6 +28,9 @@ typedef struct {
     Paddle leftPaddle;
     Paddle rightPaddle;
     
+    uint8_t leftScore;
+    uint8_t rightScore;
+    
     Ball ball;
     
     btn_t exitBtn;
@@ -45,6 +48,9 @@ void Pong_step(Pong* me);
 
 void detectCollisions(Pong* me);
 void opposingPaddleControl(Pong* me);
+
+void Pong_drawMidLine(Pong* me, uint16_t color);
+void Pong_drawScore(Pong*me, uint16_t color, uint16_t bg_color);
 
 #endif	/* PONG_CONTROLLER_H */
 

@@ -8,6 +8,8 @@
 #ifndef DISPLAY_H
 #define	DISPLAY_H
 
+#define DEBUG false
+
 #define DARKMODE
 
 #ifdef DARKMODE

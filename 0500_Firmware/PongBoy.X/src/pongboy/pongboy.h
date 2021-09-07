@@ -13,13 +13,15 @@
 #include "../app/menu_ctrl.h"
 #include "../display/display.h"
 
-#define DEBUG false
+#define SLEEP_EV 255
 
 void PongBoy_init();
 void PongBoy_build();
 void PongBoy_start();
 
 void PongBoy_execEvent();
+
+void guteNacht();
 
 TSC* PongBoy_getTSC();
 Pong* PongBoy_getGame();

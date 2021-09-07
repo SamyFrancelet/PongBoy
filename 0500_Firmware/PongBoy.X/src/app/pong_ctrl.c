@@ -18,6 +18,9 @@ void Pong_init(Pong* me) {
     
     me->state = Pong_noGame;
     me->oldState = Pong_noGame;
+    
+    me->rightScore = 0;
+    me->leftScore = 0;
 }
 
 void Pong_startBehavior(Pong* me) {
@@ -106,11 +109,27 @@ void detectCollisions(Pong* me) {
     }
     
     // Out collisions
-    if (ball->posX <= 1 || (ball->posX + BALL_SIZE) >= LCD_WIDTH-1) {
-        //ball->speedX = -(ball->speedX);
-        ball->posX = 70;
-        ball->posY = 90;
+    if (ball->posX <= 1) { // Left out
+        me->rightScore++;
+        
+        ball->posX = leftPad->posX + PADDLE_WIDTH + 2*BALL_SIZE;
+        ball->posY = leftPad->posY + PADDLE_HEIGHT/2;
+        ball->speedX = BALL_SPEED;
+        ball->speedY = BALL_SPEED;
+    } else if (ball->posX + BALL_SIZE >= LCD_WIDTH-1) {
+        me->leftScore++;
+        
+        ball->posX = rightPad->posX - 2*BALL_SIZE;
+        ball->posY = rightPad->posY + PADDLE_HEIGHT/2;
+        ball->speedX = -BALL_SPEED;
+        ball->speedY = -BALL_SPEED;
     }
+    
+//    if (ball->posX <= 1 || (ball->posX + BALL_SIZE) >= LCD_WIDTH-1) {
+//        //ball->speedX = -(ball->speedX);
+//        ball->posX = 70;
+//        ball->posY = 90;
+//    }
     
     // Paddle collisions
     bool leftPadColl = (ball->posX <= leftPad->posX + PADDLE_WIDTH + 1
@@ -143,4 +162,24 @@ void opposingPaddleControl(Pong* me) {
     } else {
         rightPad->speedY = -PADDLE_SPEED/2;
     }
+}
+
+void Pong_drawMidLine(Pong* me, uint16_t color) {
+    LCD_DrawRect(159, 0, 161, 240, true, color);
+}
+
+void Pong_drawScore(Pong*me, uint16_t color, uint16_t bg_color) {
+    char txt[20];
+
+    //LCD_DrawRect(130, 20, 150, 32, true, bg_color);
+    
+    sprintf(txt, "%d", me->leftScore);
+    LCD_DrawText(txt, &arialNarrow_12ptFontInfo,
+        A_LEFT, 140, 20, color, bg_color);
+    
+    //LCD_DrawRect(170, 20, 190, 32, true, bg_color);
+    
+    sprintf(txt, "%d", me->rightScore);
+    LCD_DrawText(txt, &arialNarrow_12ptFontInfo,
+        A_LEFT, 180, 20, color, bg_color);
 }
