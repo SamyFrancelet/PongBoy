@@ -8,7 +8,7 @@
 #ifndef DISPLAY_H
 #define	DISPLAY_H
 
-//#define DARKMODE
+#define DARKMODE
 
 #ifdef DARKMODE
 #define ITEM_COLOR WHITE
@@ -20,11 +20,6 @@
 
 #include "../xf/xf.h"
 #include "../board/lcd/lcd_highlevel.h"
-
-typedef enum {
-    evStartGame = 1,
-    evMenu = 2
-} Display_event;
 
 typedef enum {
     Display_menu,

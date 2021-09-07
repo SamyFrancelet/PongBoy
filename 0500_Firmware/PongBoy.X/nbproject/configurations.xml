@@ -16,6 +16,8 @@
       <logicalFolder name="f5" displayName="app" projectFiles="true">
         <itemPath>src/app/pong_ctrl.c</itemPath>
         <itemPath>src/app/pong_ctrl.h</itemPath>
+        <itemPath>src/app/menu_ctrl.h</itemPath>
+        <itemPath>src/app/menu_ctrl.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="board" projectFiles="true">
         <logicalFolder name="f1" displayName="lcd" projectFiles="true">

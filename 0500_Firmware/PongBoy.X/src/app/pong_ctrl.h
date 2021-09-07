@@ -12,8 +12,7 @@
 #include "../game_objects/ball.h"
 
 typedef enum {
-    Pong_reset,
-    Pong_start,
+    Pong_noGame,
     Pong_idle,
     Pong_update
 } Pong_state;
@@ -38,6 +37,9 @@ void Pong_init(Pong* me);
 void Pong_startBehavior(Pong* me);
 void Pong_SM(Pong* me, Event ev);
 void Pong_step(Pong* me);
+
+void detectCollisions(Pong* me);
+void opposingPaddleControl(Pong* me);
 
 #endif	/* PONG_CONTROLLER_H */
 

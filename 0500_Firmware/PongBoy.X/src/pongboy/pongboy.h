@@ -10,7 +10,10 @@
 
 #include "../board/tsc/tsc.h"
 #include "../app/pong_ctrl.h"
+#include "../app/menu_ctrl.h"
 #include "../display/display.h"
+
+#define DEBUG false
 
 void PongBoy_init();
 void PongBoy_build();
@@ -20,6 +23,7 @@ void PongBoy_execEvent();
 
 TSC* PongBoy_getTSC();
 Pong* PongBoy_getGame();
+Menu* PongBoy_getMenu();
 
 #endif	/* PONGBOY_H */
 

@@ -12,13 +12,15 @@ void Display_init(Display* me) {
 }
 
 void Display_startBehavior(Display* me) {
-    me->state = Display_game;
-    me->oldState = Display_game;
+    me->state = Display_menu;
+    me->oldState = Display_menu;
     
-    Pong* pong = PongBoy_getGame();
-    Paddle_draw(&(pong->leftPaddle), ITEM_COLOR, BG_COLOR);
-    Paddle_draw(&(pong->rightPaddle), ITEM_COLOR, BG_COLOR);
-    Ball_draw(&(pong->ball), ITEM_COLOR, BG_COLOR);
+    XF_pushEvent(Menu_redraw, false);
+    
+//    Pong* pong = PongBoy_getGame();
+//    Paddle_draw(&(pong->leftPaddle), ITEM_COLOR, BG_COLOR);
+//    Paddle_draw(&(pong->rightPaddle), ITEM_COLOR, BG_COLOR);
+//    Ball_draw(&(pong->ball), ITEM_COLOR, BG_COLOR);
 }
 
 bool Display_update(Display* me, Event ev) {
@@ -26,16 +28,26 @@ bool Display_update(Display* me, Event ev) {
     me->oldState = me->state;
     
     Pong* pong;
+    Menu* menu;
     
     switch(me->state) {
         case Display_menu:
-            if (ev == evStartGame) {
+            if (ev == Pong_startGameEv) {
                 me->state = Display_game;
+            } else if (ev == Menu_redraw) {
+                // Redraws menu
+                menu = PongBoy_getMenu();
+                if(menu->state == Menu_main) {
+                    LCD_Fill(BG_COLOR);
+                    LCD_ButtonDraw(&(menu->SinglePlayerBtn));
+                } else if (menu->state == Menu_settings) {
+                    
+                }
             }
             break;
             
         case Display_game:
-            if (ev == evMenu) {
+            if (ev == Menu_evMenu) {
                 me->state = Display_menu;
             } else if (ev == Paddle_redraw) {
                 pong = PongBoy_getGame();
@@ -56,9 +68,13 @@ bool Display_update(Display* me, Event ev) {
         
         switch(me->state) {
             case Display_menu:
+                menu = PongBoy_getMenu();
+                LCD_Fill(BG_COLOR);
+                LCD_ButtonDraw(&(menu->SinglePlayerBtn));
                 break;
                 
             case Display_game:
+                LCD_Fill(BG_COLOR);
                 pong = PongBoy_getGame();
                 Paddle_draw(&(pong->leftPaddle), ITEM_COLOR, BG_COLOR);
                 Paddle_draw(&(pong->rightPaddle), ITEM_COLOR, BG_COLOR);

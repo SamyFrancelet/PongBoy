@@ -12,13 +12,12 @@
 #include "pongboy.h"
 #include "../xf/xf.h"
 
-#define DEBUG true
-
 extern const FONT_INFO arialNarrow_12ptFontInfo;
 
 TSC tsc;
-Display disp;
+Menu menu;
 Pong pong;
+Display disp;
 
 void PongBoy_init() {
     // Start the PLL
@@ -47,6 +46,7 @@ void PongBoy_init() {
 //            A_LEFT, 50, 50, WHITE, BLACK);
 
     TSC_init(&tsc);
+    Menu_init(&menu);
     Pong_init(&pong);
     Display_init(&disp);
 }
@@ -57,6 +57,7 @@ void PongBoy_build() {
 
 void PongBoy_start() {
     TSC_startBehavior(&tsc);
+    Menu_startBehavior(&menu);
     Pong_startBehavior(&pong);
     Display_startBehavior(&disp);
 }
@@ -67,19 +68,20 @@ void PongBoy_execEvent() {
     
     if (ev != NULLEVENT) {
         TSC_SM(&tsc, ev);
+        Menu_SM(&menu, ev);
         Pong_SM(&pong, ev);
         Display_update(&disp, ev);
         
         if (ev == TSC_evTSC && DEBUG) {
             char txt[20];
-            
+
             sprintf(txt, "X=%03d", tsc.x);
             LCD_DrawText(txt, &arialNarrow_12ptFontInfo,
-                    A_LEFT, 0, 0, RED, BLACK);
+                    A_LEFT, 0, 0, RED, BG_COLOR);
 
             sprintf(txt, "Y=%03d", tsc.y);
             LCD_DrawText(txt, &arialNarrow_12ptFontInfo,
-                    A_RIGHT, 320, 0, RED, BLACK);
+                    A_RIGHT, 320, 0, RED, BG_COLOR);
         }
     }
 }
@@ -90,4 +92,8 @@ TSC* PongBoy_getTSC() {
 
 Pong* PongBoy_getGame() {
     return &pong;
+}
+
+Menu* PongBoy_getMenu() {
+    return &menu;
 }

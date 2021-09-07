@@ -7,18 +7,16 @@ void Pong_init(Pong* me) {
     Paddle_init(&(me->rightPaddle), false);
     Ball_init(&(me->ball));
     
-    me->state = Pong_idle;
-    me->oldState = Pong_idle;
+    me->state = Pong_noGame;
+    me->oldState = Pong_noGame;
 }
 
 void Pong_startBehavior(Pong* me) {
     Paddle_startBehavior(&(me->leftPaddle));
     Paddle_startBehavior(&(me->rightPaddle));
     
-    me->state = Pong_idle;
-    me->oldState = Pong_idle;
-    
-    XF_scheduleTimer(30, Pong_stepEv, false);
+    me->state = Pong_noGame;
+    me->oldState = Pong_noGame;
 }
 
 void Pong_SM(Pong* me, Event ev) {
@@ -29,6 +27,12 @@ void Pong_SM(Pong* me, Event ev) {
     me->oldState = me->state;
     
     switch(me->state) {
+        case Pong_noGame:
+            if (ev == Pong_startGameEv) {
+                me->state = Pong_idle;
+                XF_scheduleTimer(30, Pong_stepEv, false);
+            }
+            break;
         case Pong_idle:
             if (ev == Pong_stepEv) {
                 me->state = Pong_update;
@@ -64,15 +68,18 @@ void Pong_step(Pong* me) {
     Paddle* rightPad = &(me->rightPaddle);
     Ball* ball = &(me->ball);
     
-    if(rightPad->posY + PADDLE_HEIGHT/2 < ball->posY + BALL_SIZE/2) {
-        rightPad->speedY = PADDLE_SPEED/2;
-    } else {
-        rightPad->speedY = -PADDLE_SPEED/2;
-    }
-    
+    detectCollisions(me);
+    opposingPaddleControl(me);
+        
     Paddle_step(leftPad);
     Paddle_step(rightPad);
     Ball_step(ball);
+}
+
+void detectCollisions(Pong* me) {
+    Paddle* leftPad = &(me->leftPaddle);
+    Paddle* rightPad = &(me->rightPaddle);
+    Ball* ball = &(me->ball);
     
     // Collisions
     // Wall collisions :
@@ -105,5 +112,17 @@ void Pong_step(Pong* me) {
     
     if (rightPadColl) {
         ball->speedX = -(ball->speedX);
+    }
+}
+
+void opposingPaddleControl(Pong* me) {
+//    Paddle* leftPad = &(me->leftPaddle);
+    Paddle* rightPad = &(me->rightPaddle);
+    Ball* ball = &(me->ball);
+    
+    if(rightPad->posY + PADDLE_HEIGHT/2 < ball->posY + BALL_SIZE/2) {
+        rightPad->speedY = PADDLE_SPEED/2;
+    } else {
+        rightPad->speedY = -PADDLE_SPEED/2;
     }
 }
