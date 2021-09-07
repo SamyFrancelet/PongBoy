@@ -10,6 +10,7 @@
 
 #include "../game_objects/paddle.h"
 #include "../game_objects/ball.h"
+#include "../board/lcd/lcd_highlevel.h"
 
 typedef enum {
     Pong_noGame,
@@ -29,8 +30,12 @@ typedef struct {
     
     Ball ball;
     
+    btn_t exitBtn;
+    
     Pong_state state;
     Pong_state oldState;
+    
+    TimerID gameTimer;
 } Pong;
 
 void Pong_init(Pong* me);

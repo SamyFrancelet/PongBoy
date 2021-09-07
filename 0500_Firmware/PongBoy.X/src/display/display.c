@@ -81,6 +81,7 @@ bool Display_update(Display* me, Event ev) {
                 Paddle_draw(&(pong->leftPaddle), ITEM_COLOR, BG_COLOR);
                 Paddle_draw(&(pong->rightPaddle), ITEM_COLOR, BG_COLOR);
                 Ball_draw(&(pong->ball), ITEM_COLOR, BG_COLOR);
+                LCD_ButtonDraw(&(pong->exitBtn));
                 break;
         }
     }
