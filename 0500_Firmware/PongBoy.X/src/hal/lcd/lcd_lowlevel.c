@@ -23,6 +23,9 @@ void LCD_Lowlevel_Init(void)
   DIR_LCD_DnC = 0;
   //DIR_LCD_nRES = 0;
   DIR_LCD_DATA_BUS = 0x00;
+  
+  LCD_BACKLIGHT_DIR = 0;
+  LCD_POW_DIR = 0;
 
 	//LCD_nRES = 0;			// Reset the LCD-MODULE
 	LCD_nCS = 0;			// chip select
@@ -52,6 +55,7 @@ void LCD_Lowlevel_Init(void)
 void LCD_PowerOff(void)
 {
   LCD_BACKLIGHT = 0;  // turn off backlight
+  LCD_POW = 0;        // turn off screen
 }
 /******************************************************************************/
 /* FUNCTION : LCD_PowerOn                                                     */
@@ -64,6 +68,7 @@ void LCD_PowerOff(void)
 void LCD_PowerOn(void)
 {
   LCD_BACKLIGHT = 1;  // turn on backlight
+  LCD_POW = 1;        // turn on screen
 }
 /******************************************************************************/
 /* FUNCTION : lcd_read                                                        */

@@ -1,4 +1,5 @@
 #include "display.h"
+#include "../hal/lcd/lcd_lowlevel.h"
 #include "../pongboy/pongboy.h"
 #include "../app/pong_ctrl.h"
 
@@ -7,6 +8,7 @@ void Display_init(Display* me) {
     me->oldState = Display_menu;
     
     LCD_Init();
+    LCD_PowerOn();
     
     LCD_Fill(BG_COLOR);
 }

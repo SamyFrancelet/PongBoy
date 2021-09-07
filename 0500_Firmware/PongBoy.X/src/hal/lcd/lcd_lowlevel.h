@@ -234,6 +234,9 @@
 #define LCD_BACKLIGHT_DIR TRISC1
 #define LCD_BACKLIGHT     LATC1
 
+#define LCD_POW_DIR       TRISC0
+#define LCD_POW           LATC0
+
 //------------------------------------------------------------------------------
 // Macro definition for very fast access
 // Add a chip select if needed
