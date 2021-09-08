@@ -5,6 +5,13 @@
 
 extern const FONT_INFO arialNarrow_12ptFontInfo;
 
+/**
+ * Initialise the Menu controller
+ * 
+ * @param me - Menu controller object
+ * 
+ * @author Samy Francelet
+ */
 void Menu_init(Menu* me) {
     me->state = Menu_main;
     me->oldState = Menu_main;
@@ -22,11 +29,27 @@ void Menu_init(Menu* me) {
     me->backLightSlider.value = 100;
 }
 
+/**
+ * Starting behavior of the Menu state machine
+ * 
+ * @param me - Menu controller object
+ * 
+ * @author Samy Francelet
+ */
 void Menu_startBehavior(Menu* me) {
     me->state = Menu_main;
     me->oldState = Menu_main;
 }
 
+/**
+ * Update the Menu state machine
+ * accordingly to the event received
+ * 
+ * @param me - Menu controller object
+ * @param ev - event to react
+ * 
+ * @author Samy Francelet
+ */
 void Menu_SM(Menu* me, Event ev) {
     me->oldState = me->state;
     TSC* tsc;
@@ -52,6 +75,15 @@ void Menu_SM(Menu* me, Event ev) {
     }
 }
 
+/**
+ * Check if the TouchScreen has clicked on an object
+ * 
+ * @param me - Menu controller object
+ * @param posX - TouchScreen x position
+ * @param posY - TouchScreen y position
+ * 
+ * @author Samy Francelet
+ */
 void checkClick(Menu* me, uint16_t posX, uint16_t posY) {
     if (me->state == Menu_main) {
         if (LCD_InButton(&(me->SinglePlayerBtn), posX, posY)) {

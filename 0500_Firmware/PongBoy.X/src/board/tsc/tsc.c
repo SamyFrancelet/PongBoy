@@ -1,6 +1,13 @@
 #include <xc.h>
 #include "tsc.h"
 
+/**
+ * Initialise the TouchScreen object
+ * 
+ * @param me - TouchScreen object
+ * 
+ * @author Samy Francelet
+ */
 void TSC_init(TSC* me) {
     me->state = TSC_waitPress;
     me->oldState = TSC_waitPress;
@@ -28,6 +35,13 @@ void TSC_init(TSC* me) {
     TSC_YU_OUT = 0;
 }
 
+/**
+ * Measure the X and Y positions on the TouchScreen
+ * 
+ * @param me - TouchScreen object
+ * 
+ * @author Samy Francelet
+ */
 void TSC_getPos(TSC* me) {
     
     // Analog measurement
@@ -60,6 +74,13 @@ void TSC_getPos(TSC* me) {
     }
 }
 
+/**
+ * Measure x position
+ * 
+ * @param me - TouchScreen object
+ * 
+ * @author Samy Francelet
+ */
 void TSC_measX(TSC* me) {
     DIR_TSC_XR = 0; // output
     DIR_TSC_XL = 0; // output
@@ -76,6 +97,13 @@ void TSC_measX(TSC* me) {
     me->meas_x = ADRES;
 }
 
+/**
+ * Measure y position
+ * 
+ * @param me - TouchScreen object
+ * 
+ * @author Samy Francelet
+ */
 void TSC_measY(TSC* me) {
     DIR_TSC_XR = 1; // open
     DIR_TSC_XL = 1; // measuring pin
@@ -92,6 +120,13 @@ void TSC_measY(TSC* me) {
     me->meas_y = ADRES;
 }
 
+/**
+ * Starting behavior of the TouchScreen state machine
+ * 
+ * @param me - TouchScreen object
+ * 
+ * @author Samy Francelet
+ */
 void TSC_startBehavior(TSC* me) {
     me->state = TSC_waitPress;
     me->oldState = TSC_waitPress;
@@ -100,6 +135,16 @@ void TSC_startBehavior(TSC* me) {
     INT0IE = 1;
 }
 
+/**
+ * Updates TouchScreen state machine
+ * accordingly to the event received
+ * 
+ * @param me - TouchScreen object
+ * @param ev - event to react
+ * @return 
+ * 
+ * @author Samy Francelet
+ */
 bool TSC_SM(TSC* me, Event ev) {
     bool eventConsumed = false;
     me->oldState = me->state;

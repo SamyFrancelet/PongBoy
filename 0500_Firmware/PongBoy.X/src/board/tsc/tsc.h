@@ -42,12 +42,14 @@
 #define DIR_TSC_YU        TRISB1
 #define DIR_TSC_YD        TRISB3
 
+// TouchScreen states
 typedef enum {
     TSC_waitPress,
     TSC_measure,
     TSC_waitMeas
 } TSC_state;
 
+// TouchScreen events
 typedef enum {
     TSC_evPress     = 11,
     TSC_evNextMeas  = 12,
@@ -55,6 +57,7 @@ typedef enum {
     TSC_evTSC       = 14
 } TSC_event;
 
+// TouchScreen structure definition
 typedef struct {
     uint16_t x;
     uint16_t y;
@@ -68,10 +71,60 @@ typedef struct {
     TSC_state oldState;
 } TSC;
 
+/**
+ * Initialise the TouchScreen object
+ * 
+ * @param me - TouchScreen object
+ * 
+ * @author Samy Francelet
+ */
 void TSC_init(TSC* me);
+
+/**
+ * Measure the X and Y positions on the TouchScreen
+ * 
+ * @param me - TouchScreen object
+ * 
+ * @author Samy Francelet
+ */
 void TSC_getPos(TSC* me);
+
+/**
+ * Measure x position
+ * 
+ * @param me - TouchScreen object
+ * 
+ * @author Samy Francelet
+ */
 void TSC_measX(TSC* me);
+
+/**
+ * Measure y position
+ * 
+ * @param me - TouchScreen object
+ * 
+ * @author Samy Francelet
+ */
 void TSC_measY(TSC* me);
+
+/**
+ * Starting behavior of the TouchScreen state machine
+ * 
+ * @param me - TouchScreen object
+ * 
+ * @author Samy Francelet
+ */
 void TSC_startBehavior(TSC* me);
+
+/**
+ * Updates TouchScreen state machine
+ * accordingly to the event received
+ * 
+ * @param me - TouchScreen object
+ * @param ev - event to react
+ * @return 
+ * 
+ * @author Samy Francelet
+ */
 bool TSC_SM(TSC* me, Event ev);
 #endif

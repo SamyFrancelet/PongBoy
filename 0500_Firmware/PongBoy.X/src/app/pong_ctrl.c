@@ -7,6 +7,13 @@
 
 extern const FONT_INFO arialNarrow_12ptFontInfo;
 
+/**
+ * Initialise the Pong Game
+ * 
+ * @param me - PongGame object
+ * 
+ * @author Samy Francelet
+ */
 void Pong_init(Pong* me) {
     Paddle_init(&(me->leftPaddle), true);
     Paddle_init(&(me->rightPaddle), false);
@@ -23,6 +30,13 @@ void Pong_init(Pong* me) {
     me->leftScore = 0;
 }
 
+/**
+ * Starting behavior of the Pong state machine
+ * 
+ * @param me - PongGame object
+ * 
+ * @author Samy Francelet
+ */
 void Pong_startBehavior(Pong* me) {
     Paddle_startBehavior(&(me->leftPaddle));
     Paddle_startBehavior(&(me->rightPaddle));
@@ -31,6 +45,15 @@ void Pong_startBehavior(Pong* me) {
     me->oldState = Pong_noGame;
 }
 
+/**
+ * Update PongGame state machine
+ * accordingly to the event received
+ * 
+ * @param me - PongGame object
+ * @param ev - event to react
+ * 
+ * @author Samy Francelet
+ */
 void Pong_SM(Pong* me, Event ev) {
     Paddle_SM(&(me->leftPaddle), ev);
     Paddle_SM(&(me->rightPaddle), ev);
@@ -84,6 +107,13 @@ void Pong_SM(Pong* me, Event ev) {
     }
 }
 
+/**
+ * Update positions of every game objects
+ * 
+ * @param me - PongGame object
+ * 
+ * @author Samy Francelet
+ */
 void Pong_step(Pong* me) {
     Paddle* leftPad = &(me->leftPaddle);
     Paddle* rightPad = &(me->rightPaddle);
@@ -97,6 +127,13 @@ void Pong_step(Pong* me) {
     Ball_step(ball);
 }
 
+/**
+ * Checks is collisions have happened and react accordingly
+ * 
+ * @param me - PongGame object
+ * 
+ * @author Samy Francelet
+ */
 void detectCollisions(Pong* me) {
     Paddle* leftPad = &(me->leftPaddle);
     Paddle* rightPad = &(me->rightPaddle);
@@ -152,6 +189,13 @@ void detectCollisions(Pong* me) {
     }
 }
 
+/**
+ * AI control of the non-playable paddle
+ * 
+ * @param me - PongGame object
+ * 
+ * @author Samy Francelet
+ */
 void opposingPaddleControl(Pong* me) {
 //    Paddle* leftPad = &(me->leftPaddle);
     Paddle* rightPad = &(me->rightPaddle);
@@ -164,10 +208,27 @@ void opposingPaddleControl(Pong* me) {
     }
 }
 
+/**
+ * Draws the mid-line of the pong field
+ * 
+ * @param me - PongGame object
+ * @param color - color of the mid-line
+ * 
+ * @author Samy Francelet
+ */
 void Pong_drawMidLine(Pong* me, uint16_t color) {
     LCD_DrawRect(159, 0, 161, 240, true, color);
 }
 
+/**
+ * Draw the current game score
+ * 
+ * @param me - PongGame object
+ * @param color - score color
+ * @param bg_color - background color of the pong game
+ * 
+ * @author Samy Francelet
+ */
 void Pong_drawScore(Pong*me, uint16_t color, uint16_t bg_color) {
     char txt[20];
 
