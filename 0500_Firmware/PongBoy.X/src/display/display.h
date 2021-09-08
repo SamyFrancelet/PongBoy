@@ -25,15 +25,20 @@
 
 typedef enum {
     Display_menu,
-    Display_game
+    Display_game,
 } Display_state;
 
 typedef struct {
+    uint8_t luminosity;
+    
     Display_state state;
     Display_state oldState;
 } Display;
 
 void Display_init(Display* me);
+void Display_PWM_init(Display* me);
+void Display_setBackLight(Display* me, uint8_t luminosity);
+void Display_sleep(Display* me);
 void Display_startBehavior(Display* me);
 bool Display_update(Display* me, Event ev);
 

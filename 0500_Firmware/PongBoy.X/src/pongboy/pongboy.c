@@ -16,7 +16,7 @@ Menu menu;
 Pong pong;
 Display disp;
 
-TimerID tmrID;
+TimerID sleepID;
 
 void PongBoy_init() {
     // Start the PLL
@@ -55,7 +55,7 @@ void PongBoy_start() {
     Pong_startBehavior(&pong);
     Display_startBehavior(&disp);
     
-    tmrID = XF_scheduleTimer(5000, SLEEP_EV, false);
+    sleepID = XF_scheduleTimer(SLEEP_TIME, sleep_ev, false);
 }
 
 void PongBoy_execEvent() {
@@ -68,12 +68,12 @@ void PongBoy_execEvent() {
         Pong_SM(&pong, ev);
         Display_update(&disp, ev);
         
-        if(ev == SLEEP_EV) {
+        if(ev == sleep_ev) {
             guteNacht();
         } else if (ev == TSC_evTSC) {
-            XF_unscheduleTimer(tmrID, false);
-            tmrID = XF_scheduleTimer(5000, SLEEP_EV, false);
-        }
+            XF_unscheduleTimer(sleepID, false);
+            sleepID = XF_scheduleTimer(SLEEP_TIME, sleep_ev, false);
+        } 
     }
 }
 
@@ -85,7 +85,7 @@ void guteNacht() {
     
     LCD_DATA_BUS = 0xFF;
     
-    LCD_PowerOff();
+    Display_sleep(&disp);
     Sleep();
     //Reset();
     

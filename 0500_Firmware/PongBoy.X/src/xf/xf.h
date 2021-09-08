@@ -30,8 +30,8 @@ typedef struct Timer        // timer structure
 /*----------------------------------------------------------------------------*/
 /* depending on usage, change MAXTIMER and MAXEVENT                           */
 /*----------------------------------------------------------------------------*/
-#define MAXTIMER 8          // number of timers in our system
-#define MAXEVENT 12         // number of events in our system 
+#define MAXTIMER 12          // number of timers in our system
+#define MAXEVENT 20         // number of events in our system 
 #define NULLEVENT 0         // no event
 #define NULLTIMER 0         // no value for time
 

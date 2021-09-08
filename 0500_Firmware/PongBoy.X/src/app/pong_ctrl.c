@@ -12,7 +12,7 @@ void Pong_init(Pong* me) {
     Paddle_init(&(me->rightPaddle), false);
     Ball_init(&(me->ball));
     
-    LCD_ButtonCreate(0, 0, 16, 16, RED, ITEM_COLOR,
+    LCD_ButtonCreate(5, 5, 20, 20, RED, ITEM_COLOR,
         "X", &arialNarrow_12ptFontInfo, NULL, NULL, NULL, 
         &(me->exitBtn), 1);
     

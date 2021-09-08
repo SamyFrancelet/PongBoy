@@ -19,13 +19,16 @@ typedef enum {
 
 typedef enum {
     Menu_evMenu = 41,
-    Menu_redraw = 42
+    Menu_redraw = 42,
+    Menu_refresh = 43
 } Menu_event;
 
 typedef struct {
-    //btn_t settingsBtn;
+    btn_t settingsBtn;
     btn_t SinglePlayerBtn;
     //btn_t MultiPlayerBtn;
+    
+    sld_t backLightSlider;
     
     Menu_state state;
     Menu_state oldState;

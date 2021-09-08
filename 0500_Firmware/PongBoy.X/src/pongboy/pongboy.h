@@ -13,7 +13,12 @@
 #include "../app/menu_ctrl.h"
 #include "../display/display.h"
 
-#define SLEEP_EV 255
+#define SLEEP_TIME 30000
+
+typedef enum {
+    dim_ev = 254,
+    sleep_ev = 255
+} PongBoy_event;
 
 void PongBoy_init();
 void PongBoy_build();

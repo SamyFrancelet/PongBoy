@@ -25,6 +25,8 @@
 #define XRES 320
 #define YRES 240
 
+#define TSC_MEAS_TIME 170
+
 #define TSC_XR_OUT        LATB0
 #define TSC_XL_OUT        LATB2
 #define TSC_YU_OUT        LATB1

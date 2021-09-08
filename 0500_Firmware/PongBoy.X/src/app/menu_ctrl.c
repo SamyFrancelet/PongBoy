@@ -9,9 +9,17 @@ void Menu_init(Menu* me) {
     me->state = Menu_main;
     me->oldState = Menu_main;
     
-    LCD_ButtonCreate(100, 100, 100, 50, BG_COLOR, ITEM_COLOR,
+    LCD_ButtonCreate(20, 50, 80, 40, BG_COLOR, ITEM_COLOR,
             "1 Player", &arialNarrow_12ptFontInfo, NULL, NULL, NULL, 
             &(me->SinglePlayerBtn), 1);
+    
+    LCD_ButtonCreate(20, 150, 80, 40, BG_COLOR, ITEM_COLOR,
+            "Settings", &arialNarrow_12ptFontInfo, NULL, NULL, NULL, 
+            &(me->settingsBtn), 1);
+    
+    LCD_SliderCreate(150, 60, 100, 20, BG_COLOR, ITEM_COLOR,
+            RED, 5, 100, NULL, &(me->backLightSlider));
+    me->backLightSlider.value = 100;
 }
 
 void Menu_startBehavior(Menu* me) {
@@ -46,8 +54,21 @@ void checkClick(Menu* me, uint16_t posX, uint16_t posY) {
     if (me->state == Menu_main) {
         if (LCD_InButton(&(me->SinglePlayerBtn), posX, posY)) {
             XF_pushEvent(Pong_startGameEv, false);
+        } else if (LCD_InButton(&(me->settingsBtn), posX, posY)) {
+            XF_pushEvent(Menu_redraw, false);
+            me->state = Menu_settings;
+            me->SinglePlayerBtn.text = "Back";
         }
     } else if (me->state == Menu_settings) {
-        
+        if (LCD_InButton(&(me->SinglePlayerBtn), posX, posY)) {
+            XF_pushEvent(Menu_redraw, false);
+            me->state = Menu_main;
+            me->SinglePlayerBtn.text = "1 Player";
+        } else if (LCD_InSlider(&(me->backLightSlider), posX, posY)) {
+            uint8_t value;
+            value = posX - me->backLightSlider.posX;
+            me->backLightSlider.value = value;
+            XF_pushEvent(Menu_refresh, false);
+        }
     }
 }

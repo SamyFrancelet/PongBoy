@@ -5,17 +5,17 @@
         <group>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/pongboy/pongboy.h</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/app/menu_ctrl.h</file>
-            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/main.c</file>
+            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/board/lcd/lcd_highlevel.c</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/board/lcd/lcd_highlevel.h</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/app/menu_ctrl.c</file>
+            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/board/tsc/tsc.h</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/display/display.c</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/display/display.h</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/pongboy/pongboy.c</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/xf/xf.h</file>
-            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/globaldefs.h</file>
+            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/board/tsc/tsc.c</file>
+            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/xf/xf.c</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/app/pong_ctrl.c</file>
-            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/app/pong_ctrl.h</file>
-            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/hal/lcd/lcd_lowlevel.h</file>
         </group>
     </open-files>
 </project-private>
