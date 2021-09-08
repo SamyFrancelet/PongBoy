@@ -10,6 +10,15 @@
 
 #include "pongboy/pongboy.h"
 
+/**
+ * Interruption routine
+ * 
+ * Timer0 is the XF timer
+ * 
+ * INT0 is the TouchScreen detection interrupt
+ * 
+ * @author Samy Francelet
+ */
 void __interrupt() isr(void) {
     // Interrupt on TIMER0
     if(TMR0IF == 1 && TMR0IE == 1)
@@ -31,6 +40,12 @@ void __interrupt() isr(void) {
     }
 }
 
+/**
+ * Initialise the PongBoy
+ * and calls the event execution routine
+ * 
+ * @author Samy Francelet
+ */
 void main(void) {
     
     PongBoy_init();

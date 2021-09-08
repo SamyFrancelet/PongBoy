@@ -3,6 +3,14 @@
 #include "../pongboy/pongboy.h"
 #include "../hal/lcd/lcd_lowlevel.h"
 
+/**
+ * Initialise the paddle object
+ * 
+ * @param me - paddle object to initialise
+ * @param isPlayer - if the paddle is controllable or not
+ * 
+ * @author Samy Francelet
+ */
 void Paddle_init(Paddle* me, bool isPlayer) {
     me->isPlayer = isPlayer;
         
@@ -23,11 +31,28 @@ void Paddle_init(Paddle* me, bool isPlayer) {
     me->oldState = Paddle_notMoving;
 }
 
+/**
+ * Starting behavior of the paddle state machine
+ * 
+ * @param me - paddle object
+ * 
+ * @author Samy Francelet
+ */
 void Paddle_startBehavior(Paddle* me) {
     me->state = Paddle_notMoving;
     me->oldState = Paddle_notMoving;
 }
 
+/**
+ * Paddle state machine, modify paddle behavior
+ * accordingly to the event received
+ * 
+ * @param me - paddle object
+ * @param ev - event to react
+ * @return 
+ * 
+ * @author Samy Francelet
+ */
 bool Paddle_SM(Paddle* me, Event ev) {
     bool eventConsumed = false;
     me->oldState = me->state;
@@ -80,6 +105,15 @@ bool Paddle_SM(Paddle* me, Event ev) {
     return eventConsumed;
 }
 
+/**
+ * Draws the paddle with correct color
+ * 
+ * @param me - paddle to draw
+ * @param color - paddle color
+ * @param bg_color - pong background color, to erase prev paddle drawn
+ * 
+ * @author Samy Francelet
+ */
 void Paddle_draw(Paddle* me, uint16_t color, uint16_t bg_color) {
     LCD_DrawRect(me->oldX, me->oldY, me->oldX + PADDLE_WIDTH,
             me->oldY + PADDLE_HEIGHT, true, bg_color);
@@ -91,6 +125,14 @@ void Paddle_draw(Paddle* me, uint16_t color, uint16_t bg_color) {
             me->posY + PADDLE_HEIGHT, true, color);
 }
 
+/**
+ * Updates paddle position according to speed
+ * and throws paddle redraw event
+ * 
+ * @param me - paddle object
+ * 
+ * @author Samy Francelet
+ */
 void Paddle_step(Paddle* me) {
     if (me->speedY != 0) {
         

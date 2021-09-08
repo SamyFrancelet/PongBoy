@@ -8,6 +8,13 @@
 
 extern const FONT_INFO arialNarrow_12ptFontInfo;
 
+/**
+ * Initialise the Display object
+ * 
+ * @param me - Display object to initialise
+ * 
+ * @author Samy Francelet
+ */
 void Display_init(Display* me) {
     me->state = Display_menu;
     me->oldState = Display_menu;
@@ -22,6 +29,13 @@ void Display_init(Display* me) {
     LCD_Fill(BG_COLOR);
 }
 
+/**
+ * Initialise the PWM for the LCD backlight
+ * 
+ * @param me - Display object
+ * 
+ * @author Samy Francelet
+ */
 void Display_PWM_init(Display* me) {
     // 1 - Disable CCPx pin output driver by setting the TRIS bit
     LCD_BACKLIGHT_DIR = 1;
@@ -42,6 +56,14 @@ void Display_PWM_init(Display* me) {
     LCD_BACKLIGHT_DIR = 0;
 }
 
+/**
+ * Sets the PWM duty-cycle for the LCD backlight
+ * 
+ * @param me - Display object
+ * @param luminosity - LCD luminosity in (0 to 100)
+ * 
+ * @author Samy Francelet
+ */
 void Display_setBackLight(Display* me, uint8_t luminosity) {
     if (luminosity > 100) {
         luminosity = 100;
@@ -50,7 +72,22 @@ void Display_setBackLight(Display* me, uint8_t luminosity) {
     CCPR2L = luminosity;
 }
 
+/**
+ * Sleep routine for the Display
+ * Turn off everything and avoid current wells
+ * 
+ * @param me - Display object
+ * 
+ * @author Samy Francelet
+ */
 void Display_sleep(Display* me) {
+    LCD_nRD = 1;
+    LCD_nWR = 1;
+    LCD_DnC = 1;
+    LCD_nCS = 1;
+    
+    LCD_DATA_BUS = 0xFF;
+    
     Display_setBackLight(me, 0);
     CCP2CONbits.CCP2M = 0x0;
     TMR2IF = 0;
@@ -58,6 +95,13 @@ void Display_sleep(Display* me) {
     LCD_PowerOff();
 }
 
+/**
+ * Starting behavior of the Display state machine
+ * 
+ * @param me - Display object
+ * 
+ * @author Samy Francelet
+ */
 void Display_startBehavior(Display* me) {
     me->state = Display_menu;
     me->oldState = Display_menu;
@@ -65,6 +109,15 @@ void Display_startBehavior(Display* me) {
     XF_pushEvent(Menu_redraw, false);
 }
 
+/**
+ * Updates display accordingly to the event received
+ * 
+ * @param me - Display object
+ * @param ev - event to react
+ * @return 
+ * 
+ * @author Samy Francelet
+ */
 bool Display_update(Display* me, Event ev) {
     bool eventConsumed = false;
     me->oldState = me->state;

@@ -18,6 +18,12 @@ Display disp;
 
 TimerID sleepID;
 
+/**
+ * Initialise everything for the PongBoy to work
+ * timers, interrupts, every state machines
+ * 
+ * @author Samy Francelet
+ */
 void PongBoy_init() {
     // Start the PLL
     PLLEN = 1;           // activate PLL x4
@@ -45,10 +51,11 @@ void PongBoy_init() {
     Display_init(&disp);
 }
 
-void PongBoy_build() {
-    
-}
-
+/**
+ * Starts the behavior of every state machines
+ * 
+ * @author Samy Francelet
+ */
 void PongBoy_start() {
     TSC_startBehavior(&tsc);
     Menu_startBehavior(&menu);
@@ -58,6 +65,13 @@ void PongBoy_start() {
     sleepID = XF_scheduleTimer(SLEEP_TIME, sleep_ev, false);
 }
 
+/**
+ * Pop an event from the XF buffer
+ * and sends it to state machines
+ * Manages the sleep event
+ * 
+ * @author Samy Francelet
+ */
 void PongBoy_execEvent() {
     Event ev;
     ev = XF_popEvent(false);
@@ -77,30 +91,43 @@ void PongBoy_execEvent() {
     }
 }
 
+/**
+ * Executes the sleep routine
+ * 
+ * @author Samy Francelet
+ */
 void guteNacht() {
-    LCD_nRD = 1;
-    LCD_nWR = 1;
-    LCD_DnC = 1;
-    LCD_nCS = 1;
-    
-    LCD_DATA_BUS = 0xFF;
-    
     Display_sleep(&disp);
     Sleep();
-    //Reset();
     
+    // Instructions on wake-up
     PongBoy_init();
     PongBoy_start();
 }
 
+/**
+ * @return the TouchScreen controller
+ * 
+ * @author Samy Francelet
+ */
 TSC* PongBoy_getTSC() {
     return &tsc;
 }
 
+/**
+ * @return the Game controller
+ * 
+ * @author Samy Francelet
+ */
 Pong* PongBoy_getGame() {
     return &pong;
 }
 
+/**
+ * @return the Menu controller
+ * 
+ * @author Samy Francelet
+ */
 Menu* PongBoy_getMenu() {
     return &menu;
 }

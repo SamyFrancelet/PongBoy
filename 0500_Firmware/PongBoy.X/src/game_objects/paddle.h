@@ -21,10 +21,12 @@ typedef enum {
     Paddle_moving
 } Paddle_state;
 
+// Redraw event for every paddle
 typedef enum {
     Paddle_redraw = 61,
 } Paddle_event;
 
+// Paddle structure definition
 typedef struct {
     uint16_t posX;
     uint16_t posY;
@@ -41,10 +43,56 @@ typedef struct {
     Paddle_state oldState;
 } Paddle;
 
+/**
+ * Initialise the paddle object
+ * 
+ * @param me - paddle object to initialise
+ * @param isPlayer - if the paddle is controllable or not
+ * 
+ * @author Samy Francelet
+ */
 void Paddle_init(Paddle* me, bool isPlayer);
+
+/**
+ * Starting behavior of the paddle state machine
+ * 
+ * @param me - paddle object
+ * 
+ * @author Samy Francelet
+ */
 void Paddle_startBehavior(Paddle* me);
+
+/**
+ * Paddle state machine, modify paddle behavior
+ * accordingly to the event received
+ * 
+ * @param me - paddle object
+ * @param ev - event to react
+ * @return 
+ * 
+ * @author Samy Francelet
+ */
 bool Paddle_SM(Paddle* me, Event ev);
+
+/**
+ * Draws the paddle with correct color
+ * 
+ * @param me - paddle to draw
+ * @param color - paddle color
+ * @param bg_color - pong background color, to erase prev paddle drawn
+ * 
+ * @author Samy Francelet
+ */
 void Paddle_draw(Paddle* me, uint16_t color, uint16_t bg_color);
+
+/**
+ * Updates paddle position according to speed
+ * and throws paddle redraw event
+ * 
+ * @param me - paddle object
+ * 
+ * @author Samy Francelet
+ */
 void Paddle_step(Paddle* me);
 
 #endif	/* PADDLE_H */

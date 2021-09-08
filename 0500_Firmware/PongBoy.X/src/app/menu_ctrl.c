@@ -37,6 +37,8 @@ void Menu_SM(Menu* me, Event ev) {
             if(ev == TSC_evTSC) {
                 tsc = PongBoy_getTSC();
                 checkClick(me, tsc->x, tsc->y);
+            } else if (ev == Pong_startGameEv) {
+                me->state = Menu_inGame;
             }
             break;
 
