@@ -39,11 +39,6 @@ void PongBoy_init() {
     INTEDG0 = 0;        // Falling edge
     INT0IE = 0;         // Disable INT0
 
-//    LCD_DrawRect(100,100,150,150,1,YELLOW);
-
-//    LCD_DrawText("Hello friend", &arialNarrow_12ptFontInfo,
-//            A_LEFT, 50, 50, WHITE, BLACK);
-
     TSC_init(&tsc);
     Menu_init(&menu);
     Pong_init(&pong);
@@ -60,7 +55,7 @@ void PongBoy_start() {
     Pong_startBehavior(&pong);
     Display_startBehavior(&disp);
     
-    tmrID = XF_scheduleTimer(10000, SLEEP_EV, false);
+    tmrID = XF_scheduleTimer(5000, SLEEP_EV, false);
 }
 
 void PongBoy_execEvent() {
@@ -77,7 +72,7 @@ void PongBoy_execEvent() {
             guteNacht();
         } else if (ev == TSC_evTSC) {
             XF_unscheduleTimer(tmrID, false);
-            tmrID = XF_scheduleTimer(10000, SLEEP_EV, false);
+            tmrID = XF_scheduleTimer(5000, SLEEP_EV, false);
         }
     }
 }
@@ -92,7 +87,10 @@ void guteNacht() {
     
     LCD_PowerOff();
     Sleep();
-    Reset();
+    //Reset();
+    
+    PongBoy_init();
+    PongBoy_start();
 }
 
 TSC* PongBoy_getTSC() {
