@@ -32,7 +32,8 @@ void PongBoy_init() {
     
     // TIMER0 10 ms
     T0CON=0b10000110;    // Timer 0 on, source OSC/4, prescaler is 128
-    TMR0=65535-1250;     // Count to this value @ 128kHz is 10 ms
+    //TMR0=65535-1250;     // Count to this value @ 128kHz is 10 ms
+    TMR0 = 65535 - 33395; // Count to this value @ 128kHz is 5 ms
     
     // Intialise execution framework
     XF_init();

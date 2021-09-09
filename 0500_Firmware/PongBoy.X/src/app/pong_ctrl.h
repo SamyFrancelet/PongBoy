@@ -12,6 +12,8 @@
 #include "../game_objects/ball.h"
 #include "../board/lcd/lcd_highlevel.h"
 
+#define STEP_TIME 20
+
 typedef enum {
     Pong_noGame,
     Pong_idle,

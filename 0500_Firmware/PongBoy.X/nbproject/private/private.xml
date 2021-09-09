@@ -3,19 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/pongboy/pongboy.h</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/app/menu_ctrl.h</file>
-            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/board/lcd/lcd_highlevel.c</file>
-            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/board/lcd/lcd_highlevel.h</file>
+            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/board/tsc/tsc.c</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/app/menu_ctrl.c</file>
+            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/globaldefs.h</file>
+            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/game_objects/ball.h</file>
+            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/app/pong_ctrl.c</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/board/tsc/tsc.h</file>
-            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/display/display.c</file>
-            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/display/display.h</file>
+            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/game_objects/paddle.h</file>
+            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/app/pong_ctrl.h</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/pongboy/pongboy.c</file>
             <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/xf/xf.h</file>
-            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/board/tsc/tsc.c</file>
-            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/xf/xf.c</file>
-            <file>file:/home/samy/work/PongBoy/0500_Firmware/PongBoy.X/src/app/pong_ctrl.c</file>
         </group>
     </open-files>
 </project-private>

@@ -67,7 +67,7 @@ void Pong_SM(Pong* me, Event ev) {
         case Pong_noGame:
             if (ev == Pong_startGameEv) {
                 me->state = Pong_idle;
-                me->gameTimer = XF_scheduleTimer(30, Pong_stepEv, false);
+                me->gameTimer = XF_scheduleTimer(STEP_TIME, Pong_stepEv, false);
             }
             break;
         case Pong_idle:
@@ -99,7 +99,7 @@ void Pong_SM(Pong* me, Event ev) {
             case Pong_update:
                 Pong_step(me);
                 me->state = Pong_idle;
-                XF_scheduleTimer(30, Pong_stepEv, false);
+                XF_scheduleTimer(STEP_TIME, Pong_stepEv, false);
                 break;
             default:
                 break;
@@ -139,21 +139,34 @@ void detectCollisions(Pong* me) {
     Paddle* rightPad = &(me->rightPaddle);
     Ball* ball = &(me->ball);
     
+    uint16_t leftPad_rightSide = leftPad->posX + PADDLE_WIDTH;
+    uint16_t leftPad_topSide = leftPad->posY;
+    uint16_t leftPad_bottomSide = leftPad->posY + PADDLE_HEIGHT;
+    
+    uint16_t rightPad_leftSide = rightPad->posX;
+    uint16_t rightPad_topSide = rightPad->posY;
+    uint16_t rightPad_bottomSide = rightPad->posY + PADDLE_HEIGHT;
+    
+    uint16_t ball_rightSide = ball->posX + BALL_SIZE;
+    uint16_t ball_leftSide = ball->posX;
+    uint16_t ball_topSide = ball->posY;
+    uint16_t ball_bottomSide = ball->posY + BALL_SIZE;
+
     // Collisions
     // Wall collisions :
-    if (ball->posY <= 1 || (ball->posY + BALL_SIZE) >= LCD_HEIGHT-1) {
+    if (ball_topSide <= BALL_SPEED || ball_bottomSide >= LCD_HEIGHT-BALL_SPEED) {
         ball->speedY = -(ball->speedY);
     }
     
     // Out collisions
-    if (ball->posX <= 1) { // Left out
+    if (ball_leftSide <= 1) { // Left out
         me->rightScore++;
         
         ball->posX = leftPad->posX + PADDLE_WIDTH + 2*BALL_SIZE;
         ball->posY = leftPad->posY + PADDLE_HEIGHT/2;
         ball->speedX = BALL_SPEED;
         ball->speedY = BALL_SPEED;
-    } else if (ball->posX + BALL_SIZE >= LCD_WIDTH-1) {
+    } else if (ball_rightSide >= LCD_WIDTH-1) {
         me->leftScore++;
         
         ball->posX = rightPad->posX - 2*BALL_SIZE;
@@ -161,24 +174,16 @@ void detectCollisions(Pong* me) {
         ball->speedX = -BALL_SPEED;
         ball->speedY = -BALL_SPEED;
     }
+     
+    bool leftPadColl = ball_leftSide <= leftPad_rightSide
+            && ball_leftSide <= leftPad_rightSide + BALL_SPEED
+            && ball_topSide <= leftPad_bottomSide
+            && ball_bottomSide >= leftPad_topSide;
     
-//    if (ball->posX <= 1 || (ball->posX + BALL_SIZE) >= LCD_WIDTH-1) {
-//        //ball->speedX = -(ball->speedX);
-//        ball->posX = 70;
-//        ball->posY = 90;
-//    }
-    
-    // Paddle collisions
-    bool leftPadColl = (ball->posX <= leftPad->posX + PADDLE_WIDTH + 1
-            && ball->posX >= leftPad->posX
-            && ball->posY + BALL_SIZE >= leftPad->posY
-            && ball->posY <= leftPad->posY + PADDLE_HEIGHT);
-
-    
-    bool rightPadColl = (ball->posX + BALL_SIZE + 1 >= rightPad->posX
-            && ball->posX <= rightPad->posX
-            && ball->posY + BALL_SIZE >= rightPad->posY
-            && ball->posY <= rightPad->posY + PADDLE_HEIGHT);
+    bool rightPadColl = ball_rightSide >= rightPad_leftSide
+            && ball_rightSide <= rightPad_leftSide + BALL_SPEED
+            && ball_topSide <= rightPad_bottomSide
+            && ball_bottomSide >= rightPad_topSide;    
     
     if (leftPadColl) {
         ball->speedX = -(ball->speedX);

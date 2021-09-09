@@ -17,7 +17,7 @@ void Menu_init(Menu* me) {
     me->oldState = Menu_main;
     
     LCD_ButtonCreate(20, 50, 80, 40, BG_COLOR, ITEM_COLOR,
-            "1 Player", &arialNarrow_12ptFontInfo, NULL, NULL, NULL, 
+            "Play Pong", &arialNarrow_12ptFontInfo, NULL, NULL, NULL, 
             &(me->SinglePlayerBtn), 1);
     
     LCD_ButtonCreate(20, 150, 80, 40, BG_COLOR, ITEM_COLOR,
@@ -97,7 +97,7 @@ void checkClick(Menu* me, uint16_t posX, uint16_t posY) {
         if (LCD_InButton(&(me->SinglePlayerBtn), posX, posY)) {
             XF_pushEvent(Menu_redraw, false);
             me->state = Menu_main;
-            me->SinglePlayerBtn.text = "1 Player";
+            me->SinglePlayerBtn.text = "Play Pong";
         } else if (LCD_InSlider(&(me->backLightSlider), posX, posY)) {
             uint8_t value;
             value = posX - me->backLightSlider.posX;
