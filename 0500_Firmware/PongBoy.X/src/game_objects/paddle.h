@@ -14,7 +14,7 @@
 
 #define PADDLE_WIDTH 5
 #define PADDLE_HEIGHT 40
-#define PADDLE_SPEED 3
+#define PADDLE_SPEED 4
 
 typedef enum {
     Paddle_notMoving,

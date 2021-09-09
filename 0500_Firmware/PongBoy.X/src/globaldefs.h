@@ -8,7 +8,7 @@
 #ifndef GLOBALDEFS_H
 #define	GLOBALDEFS_H
 
-#define TICKINTERVAL 5
+#define TICKINTERVAL 10
 #define _XTAL_FREQ 64000000
 
 #endif	/* GLOBALDEFS_H */

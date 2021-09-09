@@ -23,6 +23,12 @@
 #include "../xf/xf.h"
 #include "../board/lcd/lcd_highlevel.h"
 
+#define REFRESH_TIME 30
+
+typedef enum {
+    Refresh_display = 31
+} Display_event;
+
 typedef enum {
     Display_menu,
     Display_game,

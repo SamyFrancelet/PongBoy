@@ -13,7 +13,7 @@ void Ball_init(Ball* me) {
     me->posY = 100;
     
     me->speedX = BALL_SPEED;
-    me->speedY = BALL_SPEED;
+    me->speedY = BALL_SPEED/2;
 }
 
 /**

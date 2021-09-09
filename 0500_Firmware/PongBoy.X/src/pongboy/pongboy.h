@@ -13,7 +13,7 @@
 #include "../app/menu_ctrl.h"
 #include "../display/display.h"
 
-#define SLEEP_TIME 30000
+#define SLEEP_TIME 20000
 
 typedef enum {
     dim_ev = 254,

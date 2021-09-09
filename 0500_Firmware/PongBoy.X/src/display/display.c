@@ -27,6 +27,8 @@ void Display_init(Display* me) {
     Display_PWM_init(me);
     
     LCD_Fill(BG_COLOR);
+    
+    XF_scheduleTimer(REFRESH_TIME, Refresh_display, false);
 }
 
 /**
@@ -143,7 +145,7 @@ bool Display_update(Display* me, Event ev) {
                     me->luminosity = menu->backLightSlider.value;
                     Display_setBackLight(me, me->luminosity);
                 }
-            } else if (ev == Menu_refresh) {
+            } else if (ev == Refresh_display/*Menu_refresh*/) {
                 menu = PongBoy_getMenu();
                 if(menu->state == Menu_main) {
                     LCD_ButtonUpdate(&(menu->SinglePlayerBtn));
@@ -153,23 +155,25 @@ bool Display_update(Display* me, Event ev) {
                     LCD_SliderUpdate(&(menu->backLightSlider));
                     me->luminosity = menu->backLightSlider.value;
                     Display_setBackLight(me, me->luminosity);
-                } 
+                }
+                XF_scheduleTimer(REFRESH_TIME, Refresh_display, false);
             }
             break;
             
         case Display_game:
             if (ev == Menu_evMenu) {
                 me->state = Display_menu;
-            } else if (ev == Paddle_redraw) {
+            } else if (ev == Refresh_display/*Paddle_redraw*/) {
                 pong = PongBoy_getGame();
                 Paddle_draw(&(pong->leftPaddle), ITEM_COLOR, BG_COLOR);
                 Paddle_draw(&(pong->rightPaddle), ITEM_COLOR, BG_COLOR);
-            } else if (ev == Ball_redraw) {
-                pong = PongBoy_getGame();
+            //} else if (ev == Ball_redraw) {
+                //pong = PongBoy_getGame();
                 Pong_drawMidLine(pong, ITEM_COLOR);
                 Pong_drawScore(pong, ITEM_COLOR, BG_COLOR);
                 Ball_draw(&(pong->ball), ITEM_COLOR, BG_COLOR);
                 LCD_ButtonDraw(&(pong->exitBtn));
+                XF_scheduleTimer(REFRESH_TIME, Refresh_display, false);
             }
             break;
             
