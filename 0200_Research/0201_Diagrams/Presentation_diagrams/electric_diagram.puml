@@ -6,62 +6,46 @@ skinparam Arrow {
     Color black
 }
 
-'for choice state
-skinparam activity {
-    BackgroundColor white
-    BorderColor black
+<style>
+.Physical {
+
 }
-
-skinparam state {
-    BackgroundColor skyblue
-    BorderColor black
+.HAL {
+    BackgroundColor #ff9933
 }
-
-state init {
-	initOPEN : create OPEN, set of nodes to evaluate
-	initCLOSED : create CLOSES, set of nodes already evaluated
-
-	addSTART : add START_NODE to OPEN
-
-	initOPEN -down-> initCLOSED
-	initCLOSED -down-> addSTART
+.Application {
+    BackgroundColor palegreen
 }
+</style>
 
-[*] --> init
+component "2x AAA batteries" as batt
+component "Reverse polarity protection" as rev
 
-state loop {
-	getCURR : CURRENT = node in OPEN with lowest cost
-	remCURR : remove CURRENT from OPEN
-	addCURR : add CURRENT to CLOSED
+batt -> rev
 
-	getCURR -> remCURR
-	remCURR -> addCURR
+component "Micro Controller" as uc
 
-	state c <<choice>>
+batt -[hidden]down-> uc
+rev --> uc : Powers
 
-	state "foreach NEIGHBOUR" as for {
-		isTraversable : if NEIGHBOUR is traversable and is not CLOSED
+component "LCD TouchScreen display" as lcd
 
-		isBetter : if new path is shorter OR NEIGHBOUR is not OPEN
+rev --> lcd : Powers
+uc -> lcd : Drives
+lcd -> uc : Touch
 
-		calculate : set cost of NEIGHBOUR and set parent of NEIGHBOUR to CURRENT
+component "Multiplayer Port" as multi
 
-		addNEIGH : add NEIGHBOUR to OPEN
+uc -down-> multi
+multi --> uc
 
-		isTraversable --> isBetter : yes
-		isBetter --> calculate : yes
+component "Speaker" as hp
 
-		calculate --> addNEIGH : if NEIGHBOUR is not OPEN
-	}
+uc -left-> hp
 
-	addCURR -> c
-	c -> for : else
-	for -> for : is not traversable or better
-	for -up-> getCURR : every neighbour calculated
-}
+component "Ambiant light sensor" as ldr
 
-c -> [*] : "CURRENT is the target node"
-
-init --> loop
+multi -[hidden]right->ldr
+ldr --> uc
 
 @enduml

@@ -1,0 +1,76 @@
+@startuml pathfinding_aStar
+
+skinparam shadowing false
+
+skinparam Arrow {
+    Color black
+}
+
+<style>
+.Physical {
+    BackgroundColor lightgrey
+}
+.HAL {
+
+}
+.Board {
+    BackgroundColor #ff9933
+}
+.Application {
+    BackgroundColor palegreen
+}
+.GameObject {
+    BackgroundColor skyblue
+}
+.XF {
+    BackgroundColor pink
+}
+</style>
+
+component "LCD Display" as lcd <<Physical>>
+component "TouchScreen" as tsc <<Physical>>
+
+lcd -[hidden]down-> tsc
+
+frame PongBoy {
+    component "LCD driver" as lcd_d <<HAL>>
+
+    lcd_d -left-> lcd
+
+    component "TouchScreen" as tsc_b <<Board>>
+
+    lcd_d -[hidden]down-> tsc_b
+    tsc -right-> tsc_b
+
+    component "Display" as dsp <<Application>>
+
+    dsp -left- lcd_d
+
+    component "PongBoy Controller" as pbc <<Application>>
+
+    component "Menu Controller" as mc <<Application>>
+    component "Game Controller" as gc <<Application>>
+
+    mc -[hidden]down-> gc
+    pbc -right-> mc
+    pbc -right-> gc
+    pbc -left-> dsp
+    tsc_b - pbc
+
+    component "Paddle" as pad <<GameObject>>
+    component "Ball" as ball <<GameObject>>
+
+    pad -[hidden]down-> ball
+
+    gc --right--> pad : 2
+    gc --right--> ball : 1
+
+    component "Execution framework" as xf <<XF>>
+    xf ... tsc_b
+    xf . dsp
+    xf . pbc
+    xf . mc
+    xf . gc
+}
+
+@enduml
