@@ -1,0 +1,12 @@
+@startuml paddle
+
+!theme plain
+
+start
+repeat
+repeat :not Moving;
+repeat while (event touch received ?) is (y) not (n)
+repeat :moving;
+repeat while (event releas received ?) is (y) not (n)
+
+@enduml

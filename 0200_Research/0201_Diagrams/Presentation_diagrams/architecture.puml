@@ -1,6 +1,8 @@
-@startuml pathfinding_aStar
+@startuml architecture
 
 skinparam shadowing false
+
+!theme plain
 
 skinparam Arrow {
     Color black

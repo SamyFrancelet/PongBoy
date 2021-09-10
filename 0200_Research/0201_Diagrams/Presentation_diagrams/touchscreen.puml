@@ -1,0 +1,12 @@
+@startuml touchscreen
+
+!theme plain
+
+start
+repeat :Press detected ?;
+    repeat :Measure;
+    :Convert measure to screen coordinate;
+    repeat while (Touch held ?) is (yes) not (no)
+repeat while ()
+
+@enduml

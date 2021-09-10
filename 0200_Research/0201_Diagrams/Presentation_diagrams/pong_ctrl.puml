@@ -1,0 +1,15 @@
+@startuml pong_ctrl
+
+!theme plain
+
+start
+repeat
+    repeat :in Menu;
+        repeat while (game event received ?) is (n) not (game event)
+        repeat :start game Timer;
+        :Game step;
+        :Check collisions;
+        :Move opponant;
+    repeat while (game step event received ?) is (y) not (menu event)
+
+@enduml

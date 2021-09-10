@@ -1,22 +1,6 @@
-@startuml pathfinding_aStar
+@startuml electric_diagram
 
-skinparam shadowing false
-
-skinparam Arrow {
-    Color black
-}
-
-<style>
-.Physical {
-
-}
-.HAL {
-    BackgroundColor #ff9933
-}
-.Application {
-    BackgroundColor palegreen
-}
-</style>
+!theme plain
 
 component "2x AAA batteries" as batt
 component "Reverse polarity protection" as rev

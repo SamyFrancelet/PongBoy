@@ -1,0 +1,13 @@
+@startuml pongboy
+
+!theme plain
+
+start
+repeat :Wake up;
+while (Touch press ?) is (yes)
+    :Reset sleep timer;
+endwhile (timer tick)
+:sleep;
+repeat while(Touch press ?)
+
+@enduml

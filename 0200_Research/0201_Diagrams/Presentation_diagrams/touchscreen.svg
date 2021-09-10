@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="296px" preserveAspectRatio="none" style="width:329px;height:296px;background:#FFFFFF;" version="1.1" viewBox="0 0 329 296" width="329px" zoomAndPan="magnify">
+    <defs />
+    <g>
+        <ellipse cx="142" cy="15" fill="#000000" rx="10" ry="10" style="stroke:none;stroke-width:1.0;" />
+        <rect fill="#FFFFFF" height="34.584" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="272" x="6" y="154.168" /><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="252" x="16" y="176.2324">Convert measure to screen coordinate</text>
+        <rect fill="#FFFFFF" height="34.584" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="76" x="104" y="99.584" /><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="56" x="114" y="121.6484">Measure</text>
+        <polygon fill="#FFFFFF" points="101,208.752,183,208.752,195,220.752,183,232.752,101,232.752,89,220.752,101,208.752" style="stroke:#000000;stroke-width:1.5;" /><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="16" x="146" y="243.811">no</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="82" x="101" y="225.1267">Touch held ?</text><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="23" x="195" y="218.4424">yes</text>
+        <rect fill="#FFFFFF" height="34.584" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:1.0;" width="129" x="77.5" y="45" /><text fill="#000000" font-family="Verdana" font-size="12" lengthAdjust="spacing" textLength="109" x="87.5" y="67.0645">Press detected ?</text>
+        <polygon fill="#FFFFFF" points="142,265.311,142,265.311,154,277.311,142,289.311,142,289.311,130,277.311,142,265.311" style="stroke:#000000;stroke-width:1.5;" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="142" x2="142" y1="134.168" y2="154.168" />
+        <polygon fill="#000000" points="138,144.168,142,154.168,146,144.168,142,148.168" style="stroke:#000000;stroke-width:1.0;" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="195" x2="290" y1="220.752" y2="220.752" />
+        <polygon fill="#000000" points="286,178.814,290,168.814,294,178.814,290,174.814" style="stroke:#000000;stroke-width:1.5;" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="290" x2="290" y1="116.876" y2="220.752" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="290" x2="180" y1="116.876" y2="116.876" />
+        <polygon fill="#000000" points="190,112.876,180,116.876,190,120.876,186,116.876" style="stroke:#000000;stroke-width:1.0;" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="142" x2="142" y1="188.752" y2="208.752" />
+        <polygon fill="#000000" points="138,198.752,142,208.752,146,198.752,142,202.752" style="stroke:#000000;stroke-width:1.0;" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="142" x2="142" y1="79.584" y2="99.584" />
+        <polygon fill="#000000" points="138,89.584,142,99.584,146,89.584,142,93.584" style="stroke:#000000;stroke-width:1.0;" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="154" x2="308" y1="277.311" y2="277.311" />
+        <polygon fill="#000000" points="304,173.522,308,163.522,312,173.522,308,169.522" style="stroke:#000000;stroke-width:1.5;" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="308" x2="308" y1="62.292" y2="277.311" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="308" x2="206.5" y1="62.292" y2="62.292" />
+        <polygon fill="#000000" points="216.5,58.292,206.5,62.292,216.5,66.292,212.5,62.292" style="stroke:#000000;stroke-width:1.0;" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="142" x2="142" y1="232.752" y2="265.311" />
+        <polygon fill="#000000" points="138,255.311,142,265.311,146,255.311,142,259.311" style="stroke:#000000;stroke-width:1.0;" />
+        <line style="stroke:#000000;stroke-width:1.5;" x1="142" x2="142" y1="25" y2="45" />
+        <polygon fill="#000000" points="138,35,142,45,146,35,142,39" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[bda517ee208156cb65c24349a7f459cf]
+@startuml touchscreen
+
+!theme plain
+
+start
+repeat :Press detected ?;
+    repeat :Measure;
+    :Convert measure to screen coordinate;
+    repeat while (Touch held ?) is (yes) not (no)
+repeat while ()
+
+@enduml
+
+@startuml touchscreen
+
+
+
+
+
+
+
+
+<style>
+  root {
+    BackgroundColor white
+    FontColor black
+    FontName Verdana
+    HyperLinkColor blue
+    LineColor black
+    LineThickness 1
+    Margin 5
+  }
+  caption {
+    LineThickness 0
+  }
+  footer {
+    LineThickness 0
+  }
+  header {
+    LineThickness 0
+  }
+  node {
+    MaximumWidth 300
+  }
+  title {
+    FontSize 22
+    LineThickness 0
+  }
+</style>
+
+skinparam ArrowLollipopColor black
+skinparam BackgroundColor white
+skinparam DefaultFontName Verdana
+skinparam DefaultMonospacedFontName Courier
+skinparam LifelineStrategy nosolid
+skinparam ParticipantPadding 10
+skinparam SequenceLifeLineBorderColor black
+skinparam Shadowing false
+skinparam UseBetaStyle true
+
+skinparam Activity {
+  BackgroundColor white
+  BarColor black
+  BorderColor black
+  FontColor black
+  FontName Verdana
+}
+skinparam Boundary {
+  FontColor black
+}
+skinparam Box {
+  Padding 5
+}
+skinparam CircledCharacter {
+  FontColor black
+  FontName Courier
+  Radius 9
+}
+skinparam Class {
+  BackgroundColor white
+  BorderColor black
+  FontColor black
+  FontName Verdana
+}
+skinparam ClassAttribute {
+  FontColor black
+  FontName Verdana
+}
+skinparam ClassStereotype {
+  FontColor black
+  FontName Verdana
+}
+skinparam Footer {
+  FontColor black
+  FontName Verdana
+}
+skinparam Header {
+  FontColor black
+  FontName Verdana
+}
+skinparam Hyperlink {
+  Color blue
+}
+skinparam IconPackage {
+  Color black
+  BackgroundColor white
+}
+skinparam IconPrivate {
+  Color black
+  BackgroundColor white
+}
+skinparam IconProtected {
+  Color black
+  BackgroundColor white
+}
+skinparam IconPublic {
+  Color black
+  BackgroundColor white
+}
+skinparam Note {
+  FontColor black
+  FontName Verdana
+}
+skinparam Package {
+  BorderColor black
+  FontColor black
+  FontName Verdana
+}
+skinparam State {
+  BackgroundColor white
+  BorderColor black
+}
+skinparam StereotypeA {
+  BackgroundColor white
+  BorderColor black
+}
+skinparam StereotypeC {
+  BackgroundColor white
+  BorderColor black
+}
+skinparam StereotypeE {
+  BackgroundColor white
+  BorderColor black
+}
+skinparam StereotypeI {
+  BackgroundColor white
+  BorderColor black
+}
+skinparam StereotypeN {
+  BackgroundColor white
+  BorderColor black
+}
+skinparam UseCaseStereoType {
+  FontColor black
+  FontName Verdana
+}
+
+start
+repeat :Press detected ?;
+    repeat :Measure;
+    :Convert measure to screen coordinate;
+    repeat while (Touch held ?) is (yes) not (no)
+repeat while ()
+
+@enduml
+
+PlantUML version 1.2021.6(Fri May 14 09:09:51 CEST 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: fr
+Country: CH
+-->
+    </g>
+</svg>
