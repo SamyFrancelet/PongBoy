@@ -1,0 +1,43 @@
+\section{Bilan}
+Le cahier des charges a été respecté dans son intégralité. Le mode veille
+fonctionne consomme $9[\mu A]$.
+Le gameplay est proche du vrai Pong, l'utilisation du stylet rend le gameplay
+plus agréable qu'au doigt.
+Le réglage du rétroéclairage fonctionne parfaitement, et permet aussi meilleure
+autonomie.
+
+\section{Points à corriger}
+\begin{itemize}
+  \item Sur le PCB v1.0, les signaux PGC et PGD ont été inversés sur le port
+  de programmation.
+  \item Sur le PCB v1.0 Les connecteurs de piles sont trop proches l'un de l'autre, du scotch.
+  isolant a dû être placé pour éviter des courts-circuits.
+  \item Sur le boîtier v2.1, les fixations de la plaque supérieur sont trop
+  fragiles.
+  \item Sur le boîtier v2.1, l'accès aux piles est trop étroit et rend
+  le changement de pile avec les doigts très désagréable.
+  \item Sur le boîtier v2.1, le stylet ne peut pas rentrer correctement dans
+  le boîtier à cause de l'impression 3D imprécise.
+  \item Les pull-downs présentent sur les Gate des MOSFET ne sont pas
+  nécessaires. Le PIC18LF25K22, lorsqu'il part en veille, concerve
+  l'état de ses entrées/sorties d'avant veille.
+\end{itemize}
+
+\section{Voies d'amélioration}
+\begin{itemize}
+  \item Ajout d'un joystick ou slider pour le contrôle du Paddle.
+  \item Amélioration du menu du PongBoy, ajout d'informations visuelles pour
+  l'utilisateur (par ex: le slider de luminosité n'a pas de légende).
+  \item Ajout de plusieurs réglages dans le menu paramètres (par ex: choisir
+  de jouer sur fond blanc plutôt que fond noir).
+  \item Amélioration du gameplay (balle qui s'accélère durant la manche).
+  \item Ajout d'un choix de difficulté de l'adversaire dans Pong.
+  \item Implémentation du haut-parleur, ajout de feedback sonore dans le menu
+  et dans le Pong.
+  \item Implémentation du capteur de luminosité ambiante, et réglage automatique
+  du rétroéclairage.
+  \item Implémentation du mode multi-joueur.
+\end{itemize}
+
+\section{Signatures}
+Samy Francelet

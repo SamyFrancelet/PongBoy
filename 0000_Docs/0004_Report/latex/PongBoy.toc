@@ -1,0 +1,30 @@
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{2}{}%
+\contentsline {section}{\numberline {1.1}Contexte}{2}{}%
+\contentsline {section}{\numberline {1.2}Spécifications}{2}{}%
+\contentsline {chapter}{\numberline {2}Conception}{3}{}%
+\contentsline {section}{\numberline {2.1}Développement Hardware}{3}{}%
+\contentsline {subsection}{\numberline {2.1.1}Alimentation}{4}{}%
+\contentsline {subsection}{\numberline {2.1.2}Micro Controlleur}{5}{}%
+\contentsline {subsection}{\numberline {2.1.3}Écran résistif tactile LCD}{6}{}%
+\contentsline {subsection}{\numberline {2.1.4}Périphériques}{7}{}%
+\contentsline {subsubsection}{Haut-parleur}{7}{}%
+\contentsline {subsubsection}{Capteur de luminosité ambiante}{8}{}%
+\contentsline {subsubsection}{Port multi-joueur}{8}{}%
+\contentsline {section}{\numberline {2.2}Boitier mécanique}{9}{}%
+\contentsline {section}{\numberline {2.3}Développement Firmware}{10}{}%
+\contentsline {subsection}{\numberline {2.3.1}TouchScreen}{11}{}%
+\contentsline {subsection}{\numberline {2.3.2}Mise en veille}{12}{}%
+\contentsline {subsection}{\numberline {2.3.3}Contrôleurs}{13}{}%
+\contentsline {subsubsection}{Pong Controller}{13}{}%
+\contentsline {subsubsection}{Menu Controller}{13}{}%
+\contentsline {subsection}{\numberline {2.3.4}Paddle}{14}{}%
+\contentsline {chapter}{\numberline {3}Résultats et tests}{15}{}%
+\contentsline {section}{\numberline {3.1}Résultats}{15}{}%
+\contentsline {section}{\numberline {3.2}Test}{16}{}%
+\contentsline {chapter}{\numberline {4}Conclusion}{17}{}%
+\contentsline {section}{\numberline {4.1}Bilan}{17}{}%
+\contentsline {section}{\numberline {4.2}Points à corriger}{17}{}%
+\contentsline {section}{\numberline {4.3}Voies d'amélioration}{17}{}%
+\contentsline {section}{\numberline {4.4}Signatures}{17}{}%
+\contentsline {chapter}{\numberline {A}Protocoles de test}{18}{}%

@@ -1,0 +1,31 @@
+\begin{summary}
+\section{Contexte}
+Ce projet a été réalisé dans le cadre du cours
+\emph{Summer School 2 - Infotronic} de la Haute école d'ingénieur du Valais.
+Ce cours de 3 semaines se passe à la fin de l'été, avant la reprise de
+septembre. Il a pour but de mettre en pratique les compétences acquises
+durant la 2e année du bachelor.\\
+L'objectif du projet est de développer une console de jeu portable,
+avec écran tactile, permettant de jouer au jeu \emph{Pong}.\\
+Normalement, des équipes de 2 personnes sont formées, mais
+dû au fait que nous sommes un nombre impaire, je me suis retrouvé à développer
+le PongBoy seul.
+\end{summary}
+
+\section{Spécifications}
+\begin{itemize}
+  \item La console doit être alimentée par 2 piles AAA en série, et ainsi
+  fonctionner en $3[V]$.
+  \item Une protection contre l'inversion de polarité des piles doit être
+  présente.
+  \item La console doit pouvoir être mise en veille ultra-basse-consommation,
+  pour éviter de changer les piles AAA trop régulièrement.
+  \item L'écran tactile résistif NHD-2.4-240320SF-CTXL-FTN1 doit être utilisé,
+  et une interface tactile doit être implémentée.
+  \item L'utilisation d'une puce driver pour l'écran tactile est prohibée,
+  une librairie driver est fournie.
+  \item Le micro-controlleur PIC18LF25K22 doit être utilisé, au format SOIC,
+  pour ses capacités d'ultra-basse-consommation.
+  \item L'alimentation de l'écran LCD ainsi que de son rétro-éclairage doit
+  pouvoir être coupée pour respecter la contrainte d'ultra-basse-consommation.
+\end{itemize}

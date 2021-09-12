@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="297px" preserveAspectRatio="none" style="width:639px;height:297px;background:#FFFFFF;" version="1.1" viewBox="0 0 639 297" width="639px" zoomAndPan="magnify">
+    <defs />
+    <g>
+        <!--MD5=[df754b8b6018f872868062e89c69c89d]
+entity batt-->
+        <rect fill="#FFFFFF" height="47.0146" style="stroke:#000000;stroke-width:1.0;" width="170" x="147.5" y="12" />
+        <rect fill="#FFFFFF" height="10" style="stroke:#000000;stroke-width:1.0;" width="15" x="297.5" y="17" />
+        <rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="295.5" y="19" />
+        <rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="295.5" y="23" /><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="130" x="162.5" y="46.0752">2x AAA batteries</text>
+        <!--MD5=[007a3c9942f6e4f6a759c1fa9377df5e]
+entity rev-->
+        <rect fill="#FFFFFF" height="47.0146" style="stroke:#000000;stroke-width:1.0;" width="251" x="353" y="12" />
+        <rect fill="#FFFFFF" height="10" style="stroke:#000000;stroke-width:1.0;" width="15" x="584" y="17" />
+        <rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="582" y="19" />
+        <rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="582" y="23" /><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="211" x="368" y="46.0752">Reverse polarity protection</text>
+        <!--MD5=[3a45786a43c258a5cec52944ed422cce]
+entity uc-->
+        <rect fill="#FFFFFF" height="47.0146" style="stroke:#000000;stroke-width:1.0;" width="165" x="150" y="136" />
+        <rect fill="#FFFFFF" height="10" style="stroke:#000000;stroke-width:1.0;" width="15" x="295" y="141" />
+        <rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="293" y="143" />
+        <rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="293" y="147" /><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="125" x="165" y="170.0752">Micro Controller</text>
+        <!--MD5=[350cfaaf5986e66878bb1d36a8866e5b]
+entity lcd-->
+        <rect fill="#FFFFFF" height="47.0146" style="stroke:#000000;stroke-width:1.0;" width="236" x="397.5" y="136" />
+        <rect fill="#FFFFFF" height="10" style="stroke:#000000;stroke-width:1.0;" width="15" x="613.5" y="141" />
+        <rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="611.5" y="143" />
+        <rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="611.5" y="147" /><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="196" x="412.5" y="170.0752">LCD TouchScreen display</text>
+        <!--MD5=[8bd35013ef3ca2d1e1981a8386619b49]
+entity multi-->
+        <rect fill="#FFFFFF" height="47.0146" style="stroke:#000000;stroke-width:1.0;" width="163" x="151" y="244" />
+        <rect fill="#FFFFFF" height="10" style="stroke:#000000;stroke-width:1.0;" width="15" x="294" y="249" />
+        <rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="292" y="251" />
+        <rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="292" y="255" /><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="123" x="166" y="278.0752">Multiplayer Port</text>
+        <!--MD5=[f69422155b3557745ff04b562dc97981]
+entity hp-->
+        <rect fill="#FFFFFF" height="47.0146" style="stroke:#000000;stroke-width:1.0;" width="103" x="12" y="136" />
+        <rect fill="#FFFFFF" height="10" style="stroke:#000000;stroke-width:1.0;" width="15" x="95" y="141" />
+        <rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="93" y="143" />
+        <rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="93" y="147" /><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="63" x="27" y="170.0752">Speaker</text>
+        <!--MD5=[41abb8502c041934ac44662a9d5bda45]
+entity ldr-->
+        <rect fill="#FFFFFF" height="47.0146" style="stroke:#000000;stroke-width:1.0;" width="200" x="349.5" y="244" />
+        <rect fill="#FFFFFF" height="10" style="stroke:#000000;stroke-width:1.0;" width="15" x="529.5" y="249" />
+        <rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="527.5" y="251" />
+        <rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.0;" width="4" x="527.5" y="255" /><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="160" x="364.5" y="278.0752">Ambiant light sensor</text>
+        <!--MD5=[cc703eea5055707d78e57ebbe041490f]
+link batt to rev-->
+        <path d="M317.54,35.5 C327.54,35.5 337.53,35.5 347.53,35.5 " fill="none" id="batt-to-rev" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="352.75,35.5,343.75,31.5,347.75,35.5,343.75,39.5,352.75,35.5" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[42fe858128440968e5a3c001d42841ca]
+link batt to uc-->
+        <!--MD5=[af89b48e58bbbad4410427e20d5311ac]
+link rev to uc-->
+        <path d="M433.09,59.02 C390.5,80.14 326.92,111.67 282.8,133.55 " fill="none" id="rev-to-uc" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="278.06,135.91,287.8993,135.4754,282.535,133.6797,284.3307,128.3154,278.06,135.91" style="stroke:#000000;stroke-width:1.0;" /><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="53" x="370.5" y="103.0698">Powers</text>
+        <!--MD5=[64e9a94870a4e0a7b2ac2d0c77c7ac6f]
+link rev to lcd-->
+        <path d="M485.37,59.16 C491.53,79.45 500.56,109.25 507.13,130.92 " fill="none" id="rev-to-lcd" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="508.66,135.96,509.8918,126.1885,507.2167,131.1728,502.2323,128.4977,508.66,135.96" style="stroke:#000000;stroke-width:1.0;" /><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="53" x="499.5" y="103.0698">Powers</text>
+        <!--MD5=[3a00b6603482cefdbdd94ae888508941]
+link uc to lcd-->
+        <path d="M315.12,159.5 C339.21,159.5 366.07,159.5 392.1,159.5 " fill="none" id="uc-to-lcd" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="397.29,159.5,388.29,155.5,392.29,159.5,388.29,163.5,397.29,159.5" style="stroke:#000000;stroke-width:1.0;" /><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="46" x="333.25" y="153.5698">Drives</text>
+        <!--MD5=[bed44f103b69408cc7783b9c17b5eb13]
+link lcd to uc-->
+        <path d="M397.25,179.64 C376.11,181.21 354.29,181.51 333.75,179.5 C329.3,179.06 324.75,178.52 320.17,177.9 " fill="none" id="lcd-to-uc" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="315.19,177.2,323.5402,182.4225,320.1406,177.9011,324.662,174.5015,315.19,177.2" style="stroke:#000000;stroke-width:1.0;" /><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="43" x="334.75" y="176.5698">Touch</text>
+        <!--MD5=[a866588cb57f67231c47e7acb1d67207]
+link uc to multi-->
+        <path d="M221.81,183.24 C219.32,199.45 219.09,221.33 221.12,238.6 " fill="none" id="uc-to-multi" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="221.82,243.8,224.5722,234.3435,221.147,238.8455,216.645,235.4203,221.82,243.8" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[26904a14b21274460b9462a7c52ed393]
+link multi to uc-->
+        <path d="M243.81,243.8 C246.45,227.6 246.7,205.71 244.56,188.44 " fill="none" id="multi-to-uc" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="243.81,183.24,241.1383,192.7196,244.5251,188.1886,249.0561,191.5754,243.81,183.24" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[0c5386ac61da20afdb58bc6959af3250]
+reverse link hp to uc-->
+        <path d="M120.42,159.5 C130.16,159.5 139.91,159.5 149.65,159.5 " fill="none" id="hp-backto-uc" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="115.32,159.5,124.32,163.5,120.32,159.5,124.32,155.5,115.32,159.5" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[b7e383c2e01786ed6821b0023460b25d]
+link multi to ldr-->
+        <!--MD5=[194a145a05398cdde0c7ae52e29c89c0]
+link ldr to uc-->
+        <path d="M403.29,243.93 C368.16,226.77 319.87,203.18 283.6,185.46 " fill="none" id="ldr-to-uc" style="stroke:#000000;stroke-width:1.0;" />
+        <polygon fill="#000000" points="278.79,183.11,285.1186,190.6564,283.2819,185.3061,288.6323,183.4694,278.79,183.11" style="stroke:#000000;stroke-width:1.0;" />
+        <!--MD5=[f312be663c48b44d34ebfef6a63664e4]
+@startuml electric_diagram
+
+!theme plain
+
+component "2x AAA batteries" as batt
+component "Reverse polarity protection" as rev
+
+batt -> rev
+
+component "Micro Controller" as uc
+
+batt -[hidden]down-> uc
+rev - -> uc : Powers
+
+component "LCD TouchScreen display" as lcd
+
+rev - -> lcd : Powers
+uc -> lcd : Drives
+lcd -> uc : Touch
+
+component "Multiplayer Port" as multi
+
+uc -down-> multi
+multi - -> uc
+
+component "Speaker" as hp
+
+uc -left-> hp
+
+component "Ambiant light sensor" as ldr
+
+multi -[hidden]right->ldr
+ldr - -> uc
+
+@enduml
+
+@startuml electric_diagram
+
+
+
+
+
+
+
+
+<style>
+  root {
+    BackgroundColor white
+    FontColor black
+    FontName Verdana
+    HyperLinkColor blue
+    LineColor black
+    LineThickness 1
+    Margin 5
+  }
+  caption {
+    LineThickness 0
+  }
+  footer {
+    LineThickness 0
+  }
+  header {
+    LineThickness 0
+  }
+  node {
+    MaximumWidth 300
+  }
+  title {
+    FontSize 22
+    LineThickness 0
+  }
+</style>
+
+skinparam ArrowLollipopColor black
+skinparam BackgroundColor white
+skinparam DefaultFontName Verdana
+skinparam DefaultMonospacedFontName Courier
+skinparam LifelineStrategy nosolid
+skinparam ParticipantPadding 10
+skinparam SequenceLifeLineBorderColor black
+skinparam Shadowing false
+skinparam UseBetaStyle true
+
+skinparam Activity {
+  BackgroundColor white
+  BarColor black
+  BorderColor black
+  FontColor black
+  FontName Verdana
+}
+skinparam Boundary {
+  FontColor black
+}
+skinparam Box {
+  Padding 5
+}
+skinparam CircledCharacter {
+  FontColor black
+  FontName Courier
+  Radius 9
+}
+skinparam Class {
+  BackgroundColor white
+  BorderColor black
+  FontColor black
+  FontName Verdana
+}
+skinparam ClassAttribute {
+  FontColor black
+  FontName Verdana
+}
+skinparam ClassStereotype {
+  FontColor black
+  FontName Verdana
+}
+skinparam Footer {
+  FontColor black
+  FontName Verdana
+}
+skinparam Header {
+  FontColor black
+  FontName Verdana
+}
+skinparam Hyperlink {
+  Color blue
+}
+skinparam IconPackage {
+  Color black
+  BackgroundColor white
+}
+skinparam IconPrivate {
+  Color black
+  BackgroundColor white
+}
+skinparam IconProtected {
+  Color black
+  BackgroundColor white
+}
+skinparam IconPublic {
+  Color black
+  BackgroundColor white
+}
+skinparam Note {
+  FontColor black
+  FontName Verdana
+}
+skinparam Package {
+  BorderColor black
+  FontColor black
+  FontName Verdana
+}
+skinparam State {
+  BackgroundColor white
+  BorderColor black
+}
+skinparam StereotypeA {
+  BackgroundColor white
+  BorderColor black
+}
+skinparam StereotypeC {
+  BackgroundColor white
+  BorderColor black
+}
+skinparam StereotypeE {
+  BackgroundColor white
+  BorderColor black
+}
+skinparam StereotypeI {
+  BackgroundColor white
+  BorderColor black
+}
+skinparam StereotypeN {
+  BackgroundColor white
+  BorderColor black
+}
+skinparam UseCaseStereoType {
+  FontColor black
+  FontName Verdana
+}
+
+component "2x AAA batteries" as batt
+component "Reverse polarity protection" as rev
+
+batt -> rev
+
+component "Micro Controller" as uc
+
+batt -[hidden]down-> uc
+rev - -> uc : Powers
+
+component "LCD TouchScreen display" as lcd
+
+rev - -> lcd : Powers
+uc -> lcd : Drives
+lcd -> uc : Touch
+
+component "Multiplayer Port" as multi
+
+uc -down-> multi
+multi - -> uc
+
+component "Speaker" as hp
+
+uc -left-> hp
+
+component "Ambiant light sensor" as ldr
+
+multi -[hidden]right->ldr
+ldr - -> uc
+
+@enduml
+
+PlantUML version 1.2021.6(Fri May 14 09:09:51 CEST 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: fr
+Country: CH
+-->
+    </g>
+</svg>
