@@ -6,6 +6,7 @@ start
 repeat :Press detected ?;
     repeat :Measure;
     :Convert measure to screen coordinate;
+	:Send TouchScreen event;
     repeat while (Touch held ?) is (yes) not (no)
 repeat while ()
 

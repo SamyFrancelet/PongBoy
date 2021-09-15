@@ -3,6 +3,7 @@
 !theme plain
 
 start
+:Set sleep timer;
 repeat :Wake up;
 while (Touch press ?) is (yes)
     :Reset sleep timer;
